@@ -21,38 +21,26 @@
   --radius:10px;--radius-sm:6px;
 }
 body{font-family:'DM Sans',sans-serif;background:var(--sand);color:var(--ink);min-height:100vh;font-size:15px;line-height:1.6;}
-
-/* Header */
 header{background:var(--ink);color:var(--sand);padding:2rem 2rem 1.5rem;}
 .header-inner{max-width:960px;margin:0 auto;}
 .header-eyebrow{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-mid);margin-bottom:.4rem;}
 header h1{font-family:'DM Serif Display',serif;font-size:clamp(24px,4vw,38px);font-weight:400;line-height:1.15;margin-bottom:.4rem;}
 .header-sub{font-size:13px;color:var(--ink-light);}
 .budget-pill{display:inline-block;background:var(--teal);color:#fff;font-size:11px;padding:3px 11px;border-radius:20px;margin-left:8px;vertical-align:middle;font-weight:500;}
-
-/* Nav */
 nav{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);}
 .nav-inner{max-width:960px;margin:0 auto;display:flex;gap:0;flex-wrap:wrap;}
 .nav-btn{background:transparent;border:none;color:rgba(245,240,232,.5);font-family:'DM Sans',sans-serif;font-size:13px;padding:.7rem 1.1rem;cursor:pointer;border-bottom:2px solid transparent;transition:color .15s,border-color .15s;}
 .nav-btn:hover{color:var(--sand);}
 .nav-btn.active{color:var(--sand);border-bottom-color:var(--teal-mid);}
-
-/* Main */
 main{max-width:960px;margin:0 auto;padding:1.5rem 1rem 4rem;}
 .page{display:none;}.page.active{display:block;}
-
-/* Inner tabs */
 .tab-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:1.1rem;}
 .tab-btn{font-family:'DM Sans',sans-serif;font-size:13px;padding:5px 13px;border-radius:20px;border:1px solid var(--sand-border);background:transparent;cursor:pointer;color:var(--ink-mid);}
 .tab-btn.active{background:var(--ink);color:var(--sand);border-color:var(--ink);font-weight:500;}
 .inner-pane{display:none;}.inner-pane.active{display:block;}
-
-/* Cards */
 .card{background:#fff;border:1px solid var(--sand-border);border-radius:var(--radius);padding:1.25rem;margin-bottom:10px;}
 .card-sm{background:#fff;border:1px solid var(--sand-border);border-radius:var(--radius-sm);padding:.9rem 1.1rem;margin-bottom:8px;}
 .slabel{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-light);margin:1.5rem 0 .6rem;}
-
-/* Phase cards */
 .phase-card{background:#fff;border:1px solid var(--sand-border);border-radius:var(--radius);padding:1rem 1.25rem;margin-bottom:8px;cursor:pointer;transition:border-color .15s;}
 .phase-card:hover{border-color:var(--teal-mid);}
 .phase-header{display:flex;align-items:center;gap:10px;}
@@ -68,47 +56,36 @@ main{max-width:960px;margin:0 auto;padding:1.5rem 1rem 4rem;}
 .task-icon{color:var(--ink-light);font-size:15px;margin-top:2px;flex-shrink:0;}
 .task-note{font-size:12px;color:var(--ink-light);margin-top:2px;}
 .tip-box{background:var(--teal-light);border-left:3px solid var(--teal);padding:9px 12px;font-size:13px;color:var(--teal);margin-top:10px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;}
-
-/* Budget */
 .budget-row{display:flex;align-items:center;gap:10px;margin-bottom:7px;font-size:13px;}
 .budget-label{width:170px;color:var(--ink-mid);flex-shrink:0;}
 .budget-bar-bg{flex:1;height:8px;background:var(--sand);border-radius:4px;overflow:hidden;}
 .budget-fill{height:100%;border-radius:4px;}
 .budget-amt{width:130px;text-align:right;color:var(--ink);font-weight:500;flex-shrink:0;font-size:13px;}
 .total-row{display:flex;justify-content:space-between;font-weight:500;font-size:14px;border-top:1px solid var(--sand-border);padding-top:10px;margin-top:8px;}
-
-/* Metrics */
-.metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:1.25rem;}
+.metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:1.25rem;}
 .metric{background:var(--sand-dark);border-radius:var(--radius-sm);padding:1rem;}
 .metric-label{font-size:12px;color:var(--ink-light);margin-bottom:4px;}
-.metric-value{font-size:22px;font-weight:500;color:var(--ink);}
-
-/* Checklist */
+.metric-value{font-size:20px;font-weight:500;color:var(--ink);}
 .check-item{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--sand-border);cursor:pointer;font-size:14px;}
 .check-item:hover{color:var(--teal);}
 .check-item.done{opacity:.45;text-decoration:line-through;}
-
-/* Vendor form */
 .form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-bottom:8px;}
 .form-group{display:flex;flex-direction:column;gap:4px;}
 .form-label{font-size:12px;color:var(--ink-mid);}
 input,select,textarea{font-family:'DM Sans',sans-serif;font-size:14px;padding:7px 10px;border:1px solid var(--sand-border);border-radius:var(--radius-sm);background:#fff;color:var(--ink);outline:none;transition:border-color .15s;}
 input:focus,select:focus,textarea:focus{border-color:var(--teal-mid);}
 textarea{resize:vertical;min-height:60px;}
-
-/* Buttons */
 .btn{font-family:'DM Sans',sans-serif;font-size:13px;padding:7px 16px;border-radius:var(--radius-sm);border:1px solid var(--sand-border);background:#fff;color:var(--ink);cursor:pointer;transition:background .15s,border-color .15s;font-weight:500;}
 .btn:hover{background:var(--sand);border-color:var(--teal-mid);}
 .btn-teal{background:var(--teal);color:#fff;border-color:var(--teal);}
 .btn-teal:hover{background:#2f6560;border-color:#2f6560;}
 .btn-danger{background:transparent;border-color:#e0b0ab;color:var(--red);}
 .btn-danger:hover{background:var(--red-light);}
-.btn-sm{font-size:12px;padding:4px 10px;border-radius:var(--radius-sm);border:1px solid var(--sand-border);background:transparent;color:var(--ink-mid);cursor:pointer;}
+.btn-sm{font-size:12px;padding:4px 10px;border-radius:var(--radius-sm);border:1px solid var(--sand-border);background:transparent;color:var(--ink-mid);cursor:pointer;font-family:'DM Sans',sans-serif;}
 .btn-sm:hover{background:var(--sand);color:var(--ink);}
 .btn-sm.chosen{border-color:var(--teal);color:var(--teal);background:var(--teal-light);}
+.btn-sm.owned{background:#E1F5EE;color:#085041;border-color:#5DCAA5;}
 .btn-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;}
-
-/* Quote cards */
 .quote-header{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:7px;}
 .quote-cat{font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;}
 .cat-pest{background:var(--red-light);color:var(--red);}
@@ -121,8 +98,6 @@ textarea{resize:vertical;min-height:60px;}
 .quote-price{font-size:16px;font-weight:500;}
 .quote-meta{font-size:13px;color:var(--ink-light);margin-bottom:3px;}
 .badge-chosen{background:var(--teal-light);color:var(--teal);font-size:11px;padding:3px 9px;border-radius:20px;font-weight:500;}
-
-/* Compare */
 .compare-group{background:#fff;border:1px solid var(--sand-border);border-radius:var(--radius);padding:1.1rem;margin-bottom:12px;}
 .compare-title{font-size:14px;font-weight:500;margin-bottom:10px;}
 .compare-grid{display:grid;gap:8px;}
@@ -131,12 +106,8 @@ textarea{resize:vertical;min-height:60px;}
 .compare-vendor{font-size:13px;font-weight:500;}
 .compare-price{font-size:16px;font-weight:500;margin:2px 0;}
 .compare-note{font-size:12px;color:var(--ink-mid);}
-
-/* Vendor info */
 .vendor-section{background:#fff;border:1px solid var(--sand-border);border-radius:var(--radius);padding:1rem 1.25rem;margin-bottom:10px;}
 .vendor-section h3{font-size:14px;font-weight:500;margin-bottom:10px;display:flex;align-items:center;gap:7px;}
-
-/* Floor plan */
 .floor-tabs{display:flex;gap:6px;margin-bottom:1rem;flex-wrap:wrap;}
 .ftab{font-size:13px;padding:5px 16px;border-radius:20px;border:1px solid var(--sand-border);background:transparent;cursor:pointer;color:var(--ink-mid);font-family:'DM Sans',sans-serif;}
 .ftab.active{background:var(--ink);color:var(--sand);border-color:var(--ink);font-weight:500;}
@@ -145,7 +116,29 @@ textarea{resize:vertical;min-height:60px;}
 .fp-legend-item{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--ink-mid);}
 .fp-swatch{width:14px;height:14px;border-radius:3px;flex-shrink:0;}
 .fp-note{font-size:12px;color:var(--ink-light);margin-top:.5rem;font-style:italic;}
-
+/* Budget tracker */
+.bcat-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
+.bitem-row{display:flex;align-items:center;gap:8px;padding:9px 0;border-bottom:.5px solid var(--sand-border);font-size:14px;}
+.bitem-name{flex:1;color:var(--ink);}
+.bitem-sub{font-size:11px;color:var(--ink-light);margin-top:1px;}
+.bitem-price{font-size:13px;font-weight:500;white-space:nowrap;text-align:right;min-width:80px;}
+.owned-strike{text-decoration:line-through;opacity:.5;}
+.owned-price{color:#1D9E75;}
+.bbadge{font-size:10px;padding:2px 7px;border-radius:10px;font-weight:500;margin-left:5px;}
+.b-owned{background:#E1F5EE;color:#085041;}
+.b-buy{background:var(--blue-light);color:var(--blue);}
+.b-tbd{background:var(--amber-light);color:var(--amber);}
+.bar-wrap{margin:.5rem 0 1rem;}
+.bar-bg{height:10px;background:var(--sand-dark);border-radius:5px;overflow:hidden;margin-bottom:4px;}
+.bar-fill{height:100%;border-radius:5px;transition:width .3s;}
+.bar-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--ink-light);}
+.cat-bar-row{display:flex;align-items:center;gap:8px;margin-bottom:6px;font-size:12px;}
+.cat-bar-label{width:150px;color:var(--ink-mid);flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.cat-bar-bg{flex:1;height:7px;background:var(--sand);border-radius:4px;overflow:hidden;}
+.cat-bar-fill{height:100%;border-radius:4px;}
+.cat-bar-amt{width:80px;text-align:right;font-weight:500;flex-shrink:0;font-size:12px;}
+.gtip{background:var(--sand-dark);border-left:3px solid var(--teal);padding:9px 12px;font-size:12px;color:var(--ink-mid);margin-top:.75rem;border-radius:0;}
+.section-hdr{display:flex;justify-content:space-between;align-items:center;}
 .empty-state{text-align:center;padding:2.5rem 1rem;color:var(--ink-light);font-size:14px;}
 .empty-state i{font-size:28px;display:block;margin-bottom:8px;}
 footer{text-align:center;padding:2rem;font-size:12px;color:var(--ink-light);border-top:1px solid var(--sand-border);margin-top:2rem;}
@@ -165,346 +158,133 @@ footer{text-align:center;padding:2rem;font-size:12px;color:var(--ink-light);bord
   <div class="nav-inner">
     <button class="nav-btn active" onclick="showPage('plan',this)"><i class="ti ti-calendar"></i> Project plan</button>
     <button class="nav-btn" onclick="showPage('floorplan',this)"><i class="ti ti-layout"></i> Floor plans</button>
+    <button class="nav-btn" onclick="showPage('budget',this)"><i class="ti ti-chart-bar"></i> Budget</button>
     <button class="nav-btn" onclick="showPage('vendors',this)"><i class="ti ti-building-store"></i> Vendor quotes</button>
   </div>
 </nav>
 
 <main>
 
-<!-- ══════════════════════════ PROJECT PLAN ══════════════════════════ -->
+<!-- ══════ PROJECT PLAN ══════ -->
 <div class="page active" id="page-plan">
   <div class="tab-row" style="margin-top:.5rem;">
     <button class="tab-btn active" onclick="switchInner('plan','timeline',this)"><i class="ti ti-list-check"></i> Timeline</button>
-    <button class="tab-btn" onclick="switchInner('plan','budget',this)"><i class="ti ti-chart-bar"></i> Budget</button>
+    <button class="tab-btn" onclick="switchInner('plan','budget-est',this)"><i class="ti ti-chart-bar"></i> Budget overview</button>
     <button class="tab-btn" onclick="switchInner('plan','checklist',this)"><i class="ti ti-checklist"></i> Checklist</button>
     <button class="tab-btn" onclick="switchInner('plan','guide',this)"><i class="ti ti-tool"></i> Vendor guide</button>
   </div>
-
   <div class="inner-pane active" id="plan-timeline">
     <p style="font-size:13px;color:var(--ink-light);margin-bottom:1rem;">Tap any phase to expand. Target: move-in within 4 weeks.</p>
-    <div class="phase-card" onclick="togglePhase(this)">
-      <div class="phase-header"><span class="phase-badge badge-w1">Week 1</span><span class="phase-title">Assess &amp; plan</span><i class="ti ti-chevron-down" style="color:var(--ink-light);font-size:16px;"></i></div>
-      <div class="phase-body">
-        <div class="task-row"><i class="ti ti-ruler task-icon"></i><div><div>Walk and measure all rooms</div><div class="task-note">Ground floor: hall, kitchen, helper's room. Upper: master, mum's room, WC, shower, store</div></div></div>
-        <div class="task-row"><i class="ti ti-bug task-icon"></i><div><div>Book pest control inspection immediately</div><div class="task-note">Treat before furniture arrives — corner terrace has more perimeter exposure</div></div></div>
-        <div class="task-row"><i class="ti ti-bulb task-icon"></i><div><div>Audit existing lighting fixtures &amp; power points</div></div></div>
-        <div class="task-row"><i class="ti ti-clipboard-list task-icon"></i><div><div>List all fixtures — what to keep, replace, remove</div></div></div>
-        <div class="task-row"><i class="ti ti-plant task-icon"></i><div><div>Walk the garden — assess mowing and trimming needs</div></div></div>
-        <div class="tip-box"><i class="ti ti-info-circle"></i> Get 2–3 quotes for pest control and gardening this week. Vendors book out fast.</div>
-      </div>
-    </div>
-    <div class="phase-card" onclick="togglePhase(this)">
-      <div class="phase-header"><span class="phase-badge badge-w1">Week 1–2</span><span class="phase-title">Layout &amp; lighting plan</span><i class="ti ti-chevron-down" style="color:var(--ink-light);font-size:16px;"></i></div>
-      <div class="phase-body">
-        <div class="task-row"><i class="ti ti-home task-icon"></i><div><div>Finalise room allocation — master for you, mum's room, helper's room off kitchen</div></div></div>
-        <div class="task-row"><i class="ti ti-sun task-icon"></i><div><div>Living &amp; dining: warm white 2700K–3000K — pendant over dining table</div></div></div>
-        <div class="task-row"><i class="ti ti-moon task-icon"></i><div><div>Bedrooms: layered lighting — ceiling + bedside lamps, warm tones</div></div></div>
-        <div class="task-row"><i class="ti ti-bulb task-icon"></i><div><div>Kitchen &amp; bathrooms: 4000K cool white for task lighting</div></div></div>
-        <div class="task-row"><i class="ti ti-stars task-icon"></i><div><div>Add dimmers to living area and master bedroom</div></div></div>
-        <div class="task-row"><i class="ti ti-dog task-icon"></i><div><div>Plan dog-friendly zone near garden door</div></div></div>
-        <div class="task-row"><i class="ti ti-wheelchair task-icon"></i><div><div>Confirm grab bars for mum's room — bedside and bathroom</div></div></div>
-      </div>
-    </div>
-    <div class="phase-card" onclick="togglePhase(this)">
-      <div class="phase-header"><span class="phase-badge badge-w2">Week 2–3</span><span class="phase-title">Vendor services</span><i class="ti ti-chevron-down" style="color:var(--ink-light);font-size:16px;"></i></div>
-      <div class="phase-body">
-        <div class="task-row"><i class="ti ti-bug task-icon"></i><div><div>Pest control treatment — before furniture arrives</div><div class="task-note">Full terrace treatment incl. garden perimeter</div></div></div>
-        <div class="task-row"><i class="ti ti-plant-2 task-icon"></i><div><div>First garden maintenance session — mow, trim, clear</div></div></div>
-        <div class="task-row"><i class="ti ti-repeat task-icon"></i><div><div>Set up recurring gardening schedule — every 2–4 weeks</div></div></div>
-        <div class="task-row"><i class="ti ti-bolt task-icon"></i><div><div>Electrician installs lighting fixtures and dimmers</div></div></div>
-      </div>
-    </div>
-    <div class="phase-card" onclick="togglePhase(this)">
-      <div class="phase-header"><span class="phase-badge badge-w3">Week 3–4</span><span class="phase-title">Move-in &amp; settle</span><i class="ti ti-chevron-down" style="color:var(--ink-light);font-size:16px;"></i></div>
-      <div class="phase-body">
-        <div class="task-row"><i class="ti ti-truck task-icon"></i><div><div>Furniture delivery &amp; placement</div></div></div>
-        <div class="task-row"><i class="ti ti-lamp task-icon"></i><div><div>Install and test all lighting fixtures</div></div></div>
-        <div class="task-row"><i class="ti ti-palette task-icon"></i><div><div>Decor layering — rugs, cushions, plants, art</div><div class="task-note">Scandi warmth: neutral tones, natural textures, greenery</div></div></div>
-        <div class="task-row"><i class="ti ti-dog task-icon"></i><div><div>Set up dog area, secure garden gate and fencing</div></div></div>
-        <div class="task-row"><i class="ti ti-check task-icon"></i><div><div>Snagging walkthrough — flag anything before closing out vendors</div></div></div>
-      </div>
-    </div>
-    <div class="phase-card" onclick="togglePhase(this)">
-      <div class="phase-header"><span class="phase-badge badge-ongoing">Ongoing</span><span class="phase-title">Maintenance schedule</span><i class="ti ti-chevron-down" style="color:var(--ink-light);font-size:16px;"></i></div>
-      <div class="phase-body">
-        <div class="task-row"><i class="ti ti-plant-2 task-icon"></i><div><div>Garden: every 2–4 weeks</div></div></div>
-        <div class="task-row"><i class="ti ti-bug task-icon"></i><div><div>Pest control: quarterly treatment</div></div></div>
-        <div class="task-row"><i class="ti ti-wash task-icon"></i><div><div>Deep clean: monthly with helper support</div></div></div>
-      </div>
-    </div>
+    <div class="phase-card" onclick="togglePhase(this)"><div class="phase-header"><span class="phase-badge badge-w1">Week 1</span><span class="phase-title">Assess &amp; plan</span><i class="ti ti-chevron-down" style="color:var(--ink-light);font-size:16px;"></i></div><div class="phase-body"><div class="task-row"><i class="ti ti-ruler task-icon"></i><div><div>Walk and measure all rooms</div><div class="task-note">Ground floor: hall, kitchen, helper's room. Upper: master, mum's room, WC, shower, store</div></div></div><div class="task-row"><i class="ti ti-bug task-icon"></i><div><div>Book pest control inspection immediately</div><div class="task-note">Treat before furniture arrives — corner terrace has more perimeter exposure</div></div></div><div class="task-row"><i class="ti ti-bulb task-icon"></i><div><div>Audit existing lighting fixtures &amp; power points</div></div></div><div class="task-row"><i class="ti ti-clipboard-list task-icon"></i><div><div>List all fixtures — what to keep, replace, remove</div></div></div><div class="task-row"><i class="ti ti-plant task-icon"></i><div><div>Walk the garden — assess mowing and trimming needs</div></div></div><div class="tip-box"><i class="ti ti-info-circle"></i> Get 2–3 quotes for pest control and gardening this week. Vendors book out fast.</div></div></div>
+    <div class="phase-card" onclick="togglePhase(this)"><div class="phase-header"><span class="phase-badge badge-w1">Week 1–2</span><span class="phase-title">Layout &amp; lighting plan</span><i class="ti ti-chevron-down" style="color:var(--ink-light);font-size:16px;"></i></div><div class="phase-body"><div class="task-row"><i class="ti ti-home task-icon"></i><div><div>Finalise room allocation — master for you, mum's room, helper's room off kitchen</div></div></div><div class="task-row"><i class="ti ti-sun task-icon"></i><div><div>Dining &amp; living: Philips Hue Perifo track lighting — warm 2700K</div></div></div><div class="task-row"><i class="ti ti-moon task-icon"></i><div><div>Bedrooms: layered lighting — ceiling + bedside lamps, warm tones</div></div></div><div class="task-row"><i class="ti ti-bulb task-icon"></i><div><div>Kitchen &amp; bathrooms: 4000K cool white for task lighting</div></div></div><div class="task-row"><i class="ti ti-dog task-icon"></i><div><div>Plan dog-friendly zone near garden door</div></div></div><div class="task-row"><i class="ti ti-wheelchair task-icon"></i><div><div>Confirm grab bars for mum's room — bedside and bathroom</div></div></div></div></div>
+    <div class="phase-card" onclick="togglePhase(this)"><div class="phase-header"><span class="phase-badge badge-w2">Week 2–3</span><span class="phase-title">Vendor services</span><i class="ti ti-chevron-down" style="color:var(--ink-light);font-size:16px;"></i></div><div class="phase-body"><div class="task-row"><i class="ti ti-bug task-icon"></i><div><div>Pest control treatment — before furniture arrives</div><div class="task-note">Full terrace treatment incl. garden perimeter</div></div></div><div class="task-row"><i class="ti ti-plant-2 task-icon"></i><div><div>First garden maintenance session — mow, trim, clear</div></div></div><div class="task-row"><i class="ti ti-repeat task-icon"></i><div><div>Set up recurring gardening schedule — every 2–4 weeks</div></div></div><div class="task-row"><i class="ti ti-bolt task-icon"></i><div><div>Electrician installs lighting fixtures and dimmers</div></div></div></div></div>
+    <div class="phase-card" onclick="togglePhase(this)"><div class="phase-header"><span class="phase-badge badge-w3">Week 3–4</span><span class="phase-title">Move-in &amp; settle</span><i class="ti ti-chevron-down" style="color:var(--ink-light);font-size:16px;"></i></div><div class="phase-body"><div class="task-row"><i class="ti ti-truck task-icon"></i><div><div>Furniture delivery &amp; placement</div></div></div><div class="task-row"><i class="ti ti-lamp task-icon"></i><div><div>Install and test all lighting fixtures</div></div></div><div class="task-row"><i class="ti ti-palette task-icon"></i><div><div>Decor layering — rugs, cushions, plants, art</div><div class="task-note">Scandi warmth: neutral tones, natural textures, greenery</div></div></div><div class="task-row"><i class="ti ti-dog task-icon"></i><div><div>Set up dog area, secure garden gate and fencing</div></div></div><div class="task-row"><i class="ti ti-check task-icon"></i><div><div>Snagging walkthrough — flag anything before closing out vendors</div></div></div></div></div>
+    <div class="phase-card" onclick="togglePhase(this)"><div class="phase-header"><span class="phase-badge badge-ongoing">Ongoing</span><span class="phase-title">Maintenance schedule</span><i class="ti ti-chevron-down" style="color:var(--ink-light);font-size:16px;"></i></div><div class="phase-body"><div class="task-row"><i class="ti ti-plant-2 task-icon"></i><div><div>Garden: every 2–4 weeks</div></div></div><div class="task-row"><i class="ti ti-bug task-icon"></i><div><div>Pest control: quarterly treatment</div></div></div><div class="task-row"><i class="ti ti-wash task-icon"></i><div><div>Deep clean: monthly with helper support</div></div></div></div></div>
   </div>
-
-  <div class="inner-pane" id="plan-budget">
-    <p style="font-size:13px;color:var(--ink-light);margin-bottom:1rem;">Estimated allocation within your S$15k–S$30k range.</p>
+  <div class="inner-pane" id="plan-budget-est">
+    <p style="font-size:13px;color:var(--ink-light);margin-bottom:1rem;">High-level estimate. Use the Budget tab for your live tracker.</p>
     <div class="card">
-      <div class="budget-row"><span class="budget-label">Furniture &amp; layout</span><div class="budget-bar-bg"><div class="budget-fill" style="width:42%;background:#378ADD;"></div></div><span class="budget-amt">~S$5,000–8,000</span></div>
-      <div class="budget-row"><span class="budget-label">Lighting (fixtures + install)</span><div class="budget-bar-bg"><div class="budget-fill" style="width:22%;background:#1D9E75;"></div></div><span class="budget-amt">~S$2,500–4,000</span></div>
-      <div class="budget-row"><span class="budget-label">Decor &amp; soft furnishings</span><div class="budget-bar-bg"><div class="budget-fill" style="width:13%;background:#7F77DD;"></div></div><span class="budget-amt">~S$1,500–2,500</span></div>
-      <div class="budget-row"><span class="budget-label">Electrician / handyman</span><div class="budget-bar-bg"><div class="budget-fill" style="width:9%;background:#BA7517;"></div></div><span class="budget-amt">~S$800–1,500</span></div>
-      <div class="budget-row"><span class="budget-label">Pest control</span><div class="budget-bar-bg"><div class="budget-fill" style="width:4%;background:#B04535;"></div></div><span class="budget-amt">~S$300–600</span></div>
-      <div class="budget-row"><span class="budget-label">Gardening (setup + 3 mo)</span><div class="budget-bar-bg"><div class="budget-fill" style="width:5%;background:#3A7048;"></div></div><span class="budget-amt">~S$400–800</span></div>
-      <div class="budget-row"><span class="budget-label">Contingency (10%)</span><div class="budget-bar-bg"><div class="budget-fill" style="width:8%;background:#888780;"></div></div><span class="budget-amt">~S$1,000–2,000</span></div>
-      <div class="total-row"><span>Estimated total</span><span>S$11,500–S$19,400</span></div>
+      <div class="budget-row"><span class="budget-label">Dining zone</span><div class="budget-bar-bg"><div class="budget-fill" style="width:35%;background:#7A5330;"></div></div><span class="budget-amt">~S$3,400–5,300</span></div>
+      <div class="budget-row"><span class="budget-label">Living area furniture</span><div class="budget-bar-bg"><div class="budget-fill" style="width:22%;background:#378ADD;"></div></div><span class="budget-amt">~S$2,500–4,000</span></div>
+      <div class="budget-row"><span class="budget-label">Bedroom furniture</span><div class="budget-bar-bg"><div class="budget-fill" style="width:16%;background:#7F77DD;"></div></div><span class="budget-amt">~S$1,800–3,000</span></div>
+      <div class="budget-row"><span class="budget-label">Lighting</span><div class="budget-bar-bg"><div class="budget-fill" style="width:10%;background:#C47C2B;"></div></div><span class="budget-amt">~S$800–1,500</span></div>
+      <div class="budget-row"><span class="budget-label">Decor &amp; soft furnishings</span><div class="budget-bar-bg"><div class="budget-fill" style="width:8%;background:#5DCAA5;"></div></div><span class="budget-amt">~S$800–1,500</span></div>
+      <div class="budget-row"><span class="budget-label">Pest control + gardening</span><div class="budget-bar-bg"><div class="budget-fill" style="width:5%;background:#3A7048;"></div></div><span class="budget-amt">~S$700–1,400</span></div>
+      <div class="budget-row"><span class="budget-label">Electrician / handyman</span><div class="budget-bar-bg"><div class="budget-fill" style="width:6%;background:#BA7517;"></div></div><span class="budget-amt">~S$800–1,500</span></div>
+      <div class="budget-row"><span class="budget-label">Contingency (10%)</span><div class="budget-bar-bg"><div class="budget-fill" style="width:5%;background:#888780;"></div></div><span class="budget-amt">~S$1,160–1,820</span></div>
+      <div class="total-row"><span>Estimated total</span><span>S$11,760–20,020</span></div>
     </div>
-    <div class="tip-box" style="margin-top:.5rem;">Headroom within your S$30k budget — allocate remainder to quality key pieces or keep as buffer for unexpected terrace repairs.</div>
+    <div class="tip-box">Wine fridge already owned — saving ~S$600–900. Headroom of S$10,000–18,000 remaining for living area and bedrooms.</div>
   </div>
-
   <div class="inner-pane" id="plan-checklist">
     <p style="font-size:13px;color:var(--ink-light);margin-bottom:.75rem;">Tap items to mark done.</p>
     <div id="checklist-container"></div>
   </div>
-
   <div class="inner-pane" id="plan-guide">
-    <div class="vendor-section">
-      <h3><i class="ti ti-bug" style="color:var(--red);"></i> Pest control</h3>
-      <div class="task-row"><i class="ti ti-checklist task-icon"></i><div><div style="font-weight:500;">What to request</div><div class="task-note">Full inspection + treatment: termites, cockroaches, ants, mosquitoes. Ask if they treat the garden perimeter.</div></div></div>
-      <div class="task-row"><i class="ti ti-coin task-icon"></i><div><div style="font-weight:500;">Typical cost</div><div class="task-note">S$150–350 one-time. Quarterly contracts: ~S$80–150/visit.</div></div></div>
-      <div class="task-row"><i class="ti ti-search task-icon"></i><div><div style="font-weight:500;">Where to find</div><div class="task-note">Rentokil, Killem Pest, Anticimex — NEA-licensed. Also check Carousell for local operators.</div></div></div>
-    </div>
-    <div class="vendor-section">
-      <h3><i class="ti ti-plant" style="color:var(--green);"></i> Gardening / lawn</h3>
-      <div class="task-row"><i class="ti ti-checklist task-icon"></i><div><div style="font-weight:500;">What to request</div><div class="task-note">Mowing, trimming hedges, clearing leaves, edging. First visit usually costs more.</div></div></div>
-      <div class="task-row"><i class="ti ti-coin task-icon"></i><div><div style="font-weight:500;">Typical cost</div><div class="task-note">S$80–180/visit for a terrace. Monthly contracts cheaper per visit.</div></div></div>
-      <div class="task-row"><i class="ti ti-search task-icon"></i><div><div style="font-weight:500;">Where to find</div><div class="task-note">Helpling, Kaodim, Facebook "Singapore Gardening" groups. Ask neighbours — corner terraces often share a gardener.</div></div></div>
-    </div>
-    <div class="vendor-section">
-      <h3><i class="ti ti-bolt" style="color:var(--blue);"></i> Electrician</h3>
-      <div class="task-row"><i class="ti ti-checklist task-icon"></i><div><div style="font-weight:500;">What to request</div><div class="task-note">Check wiring, install lighting points, set up dimmers. Must be EMA-licensed.</div></div></div>
-      <div class="task-row"><i class="ti ti-coin task-icon"></i><div><div style="font-weight:500;">Typical cost</div><div class="task-note">S$80–150/hr or per job. New light point: ~S$80–150 each.</div></div></div>
-      <div class="task-row"><i class="ti ti-search task-icon"></i><div><div style="font-weight:500;">Where to find</div><div class="task-note">Sendhelper, Kaodim, or ask your lighting shop — many have trusted installers they refer.</div></div></div>
-    </div>
+    <div class="vendor-section"><h3><i class="ti ti-bug" style="color:var(--red);"></i> Pest control</h3><div class="task-row"><i class="ti ti-checklist task-icon"></i><div><div style="font-weight:500;">What to request</div><div class="task-note">Full inspection + treatment: termites, cockroaches, ants, mosquitoes. Ask if they treat garden perimeter.</div></div></div><div class="task-row"><i class="ti ti-coin task-icon"></i><div><div style="font-weight:500;">Typical cost</div><div class="task-note">S$150–350 one-time. Quarterly contracts: ~S$80–150/visit.</div></div></div><div class="task-row"><i class="ti ti-search task-icon"></i><div><div style="font-weight:500;">Where to find</div><div class="task-note">Rentokil, Killem Pest, Anticimex — NEA-licensed. Carousell for local operators.</div></div></div></div>
+    <div class="vendor-section"><h3><i class="ti ti-plant" style="color:var(--green);"></i> Gardening / lawn</h3><div class="task-row"><i class="ti ti-checklist task-icon"></i><div><div style="font-weight:500;">What to request</div><div class="task-note">Mowing, trimming hedges, clearing leaves, edging. First visit usually costs more.</div></div></div><div class="task-row"><i class="ti ti-coin task-icon"></i><div><div style="font-weight:500;">Typical cost</div><div class="task-note">S$80–180/visit for a terrace. Monthly contracts cheaper per visit.</div></div></div><div class="task-row"><i class="ti ti-search task-icon"></i><div><div style="font-weight:500;">Where to find</div><div class="task-note">Helpling, Kaodim, Facebook "Singapore Gardening" groups. Ask neighbours — corner terraces often share a gardener.</div></div></div></div>
+    <div class="vendor-section"><h3><i class="ti ti-bolt" style="color:var(--blue);"></i> Electrician</h3><div class="task-row"><i class="ti ti-checklist task-icon"></i><div><div style="font-weight:500;">What to request</div><div class="task-note">Check wiring, install lighting points and dimmers. Must be EMA-licensed.</div></div></div><div class="task-row"><i class="ti ti-coin task-icon"></i><div><div style="font-weight:500;">Typical cost</div><div class="task-note">S$80–150/hr or per job. New light point: ~S$80–150 each.</div></div></div><div class="task-row"><i class="ti ti-search task-icon"></i><div><div style="font-weight:500;">Where to find</div><div class="task-note">Sendhelper, Kaodim, or ask your lighting shop — many have trusted installers they refer.</div></div></div></div>
   </div>
 </div>
 
-<!-- ══════════════════════════ FLOOR PLANS ══════════════════════════ -->
+<!-- ══════ FLOOR PLANS ══════ -->
 <div class="page" id="page-floorplan">
   <div class="floor-tabs" style="margin-top:.5rem;">
     <button class="ftab active" onclick="showFloor('f1',this)">1st storey — Hall &amp; Kitchen</button>
     <button class="ftab" onclick="showFloor('f2',this)">2nd storey — Bedrooms</button>
   </div>
-
-  <!-- 1ST STOREY -->
   <div class="fp-pane active" id="f1">
-    <svg width="100%" viewBox="0 0 680 540" role="img">
-      <title>1st storey layout — v6 final</title>
-      <desc>Ground floor: helper's room top left beside stairs, kitchen below with hob on left counter and fridge top right, garden door bottom left of kitchen. Main hall with main door on top wall. Dining table bottom left of living area with sideboard on dividing wall. Sofa facing TV mounted on right wall. Dog bed near garden side.</desc>
-      <defs><marker id="a1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
-      <!-- Helper's room -->
-      <rect x="40" y="40" width="190" height="150" fill="#E8E0D0" stroke="#2C2416" stroke-width="2.5"/>
-      <text font-size="12" x="135" y="30" text-anchor="middle" fill="#9C8E7A">Helper's room</text>
-      <rect x="55" y="55" width="100" height="58" rx="5" fill="#B5A898" stroke="#8B7A6A" stroke-width="1"/>
-      <rect x="55" y="55" width="100" height="15" rx="4" fill="#8B7355" stroke="#6B5335" stroke-width="1"/>
-      <rect x="62" y="58" width="85" height="12" rx="3" fill="#D4C4B0" stroke="#A89880" stroke-width="0.5"/>
-      <text font-size="12" x="105" y="95" text-anchor="middle" fill="#3C2E20">single bed</text>
-      <rect x="55" y="155" width="110" height="26" rx="4" fill="#C8B898" stroke="#9C8870" stroke-width="1"/>
-      <text font-size="12" x="110" y="172" text-anchor="middle" fill="#4A3B28">storage</text>
-      <path d="M 230 160 A 32 32 0 0 0 198 128" fill="none" stroke="#9C8E7A" stroke-width="0.8" stroke-dasharray="3 2"/>
-      <!-- Kitchen -->
-      <rect x="40" y="190" width="190" height="250" fill="#EDE6D6" stroke="#2C2416" stroke-width="2.5"/>
-      <text font-size="12" x="110" y="212" text-anchor="middle" fill="#9C8E7A">Kitchen</text>
-      <rect x="50" y="200" width="130" height="26" rx="3" fill="#C8B99A" stroke="#8B7355" stroke-width="1"/>
-      <text font-size="12" x="115" y="217" text-anchor="middle" fill="#4A3B28">counter</text>
-      <rect x="183" y="198" width="38" height="55" rx="3" fill="#D8D0C4" stroke="#9C9088" stroke-width="1"/>
-      <text font-size="12" x="202" y="228" text-anchor="middle" fill="#5A5248">fridge</text>
-      <rect x="50" y="226" width="26" height="120" rx="3" fill="#C8B99A" stroke="#8B7355" stroke-width="1"/>
-      <rect x="52" y="268" width="22" height="36" rx="2" fill="#B5A888" stroke="#8B7A60" stroke-width="0.8"/>
-      <circle cx="58" cy="278" r="4" fill="none" stroke="#7A6A50" stroke-width="0.8"/>
-      <circle cx="68" cy="278" r="4" fill="none" stroke="#7A6A50" stroke-width="0.8"/>
-      <circle cx="58" cy="294" r="4" fill="none" stroke="#7A6A50" stroke-width="0.8"/>
-      <circle cx="68" cy="294" r="4" fill="none" stroke="#7A6A50" stroke-width="0.8"/>
-      <text font-size="12" x="100" y="290" fill="#4A3B28">hob</text>
-      <path d="M 230 300 A 32 32 0 0 0 198 268" fill="none" stroke="#9C8E7A" stroke-width="0.8" stroke-dasharray="3 2"/>
-      <!-- Garden door bottom left kitchen -->
-      <rect x="40" y="432" width="55" height="6" rx="2" fill="#8B7355" stroke="#6B5335" stroke-width="1" opacity="0.5"/>
-      <path d="M 40 432 A 50 50 0 0 0 90 432" fill="none" stroke="#9C8E7A" stroke-width="0.8" stroke-dasharray="3 2"/>
-      <text font-size="12" x="65" y="452" text-anchor="middle" fill="#9C8E7A">garden door</text>
-      <!-- Staircase -->
-      <rect x="230" y="40" width="75" height="120" fill="#D8D0C0" stroke="#2C2416" stroke-width="2"/>
-      <text font-size="12" x="267" y="100" text-anchor="middle" fill="#6B5E4A">stairs</text>
-      <line x1="230" y1="58" x2="305" y2="58" stroke="#9C8E7A" stroke-width="0.5"/>
-      <line x1="230" y1="74" x2="305" y2="74" stroke="#9C8E7A" stroke-width="0.5"/>
-      <line x1="230" y1="90" x2="305" y2="90" stroke="#9C8E7A" stroke-width="0.5"/>
-      <line x1="230" y1="106" x2="305" y2="106" stroke="#9C8E7A" stroke-width="0.5"/>
-      <line x1="230" y1="122" x2="305" y2="122" stroke="#9C8E7A" stroke-width="0.5"/>
-      <!-- Main hall -->
-      <rect x="230" y="40" width="400" height="400" fill="#F5F0E8" stroke="#2C2416" stroke-width="2.5"/>
-      <!-- Main door -->
-      <rect x="305" y="38" width="55" height="6" rx="2" fill="#8B7355" stroke="#6B5335" stroke-width="1"/>
-      <path d="M 305 44 A 50 50 0 0 0 355 44" fill="none" stroke="#9C8E7A" stroke-width="0.8" stroke-dasharray="3 2"/>
-      <text font-size="12" x="330" y="63" text-anchor="middle" fill="#9C8E7A">main door</text>
-      <!-- Sideboard on dividing wall -->
-      <rect x="232" y="295" width="18" height="130" rx="3" fill="#A89070" stroke="#7A6545" stroke-width="1"/>
-      <text font-size="12" x="222" y="362" text-anchor="end" fill="#9C8E7A">sideboard</text>
-      <!-- Dining table shifted from sideboard -->
-      <rect x="293" y="305" width="75" height="130" rx="6" fill="#C8B99A" stroke="#8B7355" stroke-width="1.2"/>
-      <text font-size="12" x="330" y="373" text-anchor="middle" fill="#4A3B28">dining</text>
-      <text font-size="12" x="330" y="386" text-anchor="middle" fill="#4A3B28">table</text>
-      <rect x="277" y="318" width="14" height="26" rx="3" fill="#A89070" stroke="#7A6545" stroke-width="0.5"/>
-      <rect x="277" y="358" width="14" height="26" rx="3" fill="#A89070" stroke="#7A6545" stroke-width="0.5"/>
-      <rect x="277" y="398" width="14" height="26" rx="3" fill="#A89070" stroke="#7A6545" stroke-width="0.5"/>
-      <rect x="370" y="318" width="14" height="26" rx="3" fill="#A89070" stroke="#7A6545" stroke-width="0.5"/>
-      <rect x="370" y="358" width="14" height="26" rx="3" fill="#A89070" stroke="#7A6545" stroke-width="0.5"/>
-      <rect x="370" y="398" width="14" height="26" rx="3" fill="#A89070" stroke="#7A6545" stroke-width="0.5"/>
-      <rect x="303" y="291" width="26" height="14" rx="3" fill="#A89070" stroke="#7A6545" stroke-width="0.5"/>
-      <rect x="340" y="291" width="26" height="14" rx="3" fill="#A89070" stroke="#7A6545" stroke-width="0.5"/>
-      <rect x="303" y="435" width="26" height="14" rx="3" fill="#A89070" stroke="#7A6545" stroke-width="0.5"/>
-      <rect x="340" y="435" width="26" height="14" rx="3" fill="#A89070" stroke="#7A6545" stroke-width="0.5"/>
-      <!-- Pendant dining -->
-      <circle cx="330" cy="370" r="9" fill="none" stroke="#C47C2B" stroke-width="1.2"/>
-      <line x1="330" y1="40" x2="330" y2="361" stroke="#C47C2B" stroke-width="0.7" stroke-dasharray="3 2"/>
-      <text font-size="11" x="346" y="352" fill="#854F0B">pendant</text>
-      <!-- TV right wall -->
-      <rect x="619" y="175" width="10" height="90" rx="2" fill="#2C2416" stroke="#1A1408" stroke-width="0.5" opacity="0.85"/>
-      <rect x="594" y="183" width="34" height="74" rx="2" fill="#2C2416" stroke="#1A1408" stroke-width="0.5" opacity="0.8"/>
-      <text font-size="11" x="590" y="272" text-anchor="end" fill="#9C8E7A">TV (mounted)</text>
-      <!-- Sofa facing TV -->
-      <rect x="390" y="185" width="65" height="170" rx="8" fill="#B5A898" stroke="#8B7A6A" stroke-width="1.2"/>
-      <rect x="390" y="185" width="16" height="170" rx="4" fill="#A89888" stroke="#8B7A6A" stroke-width="0.5"/>
-      <rect x="390" y="180" width="65" height="14" rx="5" fill="#A89888" stroke="#8B7A6A" stroke-width="0.8"/>
-      <rect x="390" y="351" width="65" height="14" rx="5" fill="#A89888" stroke="#8B7A6A" stroke-width="0.8"/>
-      <text font-size="12" x="428" y="275" text-anchor="middle" fill="#3C2E20">sofa</text>
-      <rect x="350" y="188" width="34" height="34" rx="5" fill="#C8B898" stroke="#9C8870" stroke-width="0.8"/>
-      <text font-size="12" x="367" y="209" text-anchor="middle" fill="#4A3B28">side</text>
-      <!-- Coffee table -->
-      <rect x="468" y="220" width="105" height="90" rx="6" fill="#D4C4A8" stroke="#9C8C78" stroke-width="1"/>
-      <text font-size="12" x="520" y="270" text-anchor="middle" fill="#4A3B28">coffee table</text>
-      <!-- Rug -->
-      <rect x="345" y="172" width="255" height="210" rx="10" fill="none" stroke="#C47C2B" stroke-width="1" stroke-dasharray="4 3" opacity="0.5"/>
-      <!-- Dog bed -->
-      <circle cx="390" cy="400" r="22" fill="#E8D4B8" stroke="#C4A87A" stroke-width="1"/>
-      <text font-size="12" x="390" y="396" text-anchor="middle" fill="#6B4A28">dog</text>
-      <text font-size="12" x="390" y="409" text-anchor="middle" fill="#6B4A28">bed</text>
-      <!-- Armchair -->
-      <rect x="475" y="375" width="55" height="50" rx="10" fill="#C8B090" stroke="#9C8870" stroke-width="0.8"/>
-      <text font-size="12" x="502" y="405" text-anchor="middle" fill="#3C2E20">armchair</text>
-      <!-- Plant -->
-      <circle cx="600" cy="415" r="13" fill="#7A9E6A" stroke="#5A7A4A" stroke-width="0.8" opacity="0.8"/>
-      <text font-size="11" x="600" y="419" text-anchor="middle" fill="#F5F0E8">plant</text>
-      <!-- Scale -->
-      <line x1="620" y1="500" x2="620" y2="480" stroke="#9C8E7A" stroke-width="1.5" marker-end="url(#a1)"/>
-      <text font-size="11" x="620" y="516" text-anchor="middle" fill="#9C8E7A">N</text>
-      <text font-size="11" x="40" y="516" fill="#9C8E7A">1st storey · 63.8 sqm · not to exact scale</text>
-    </svg>
-    <div class="fp-legend">
-      <div class="fp-legend-item"><div class="fp-swatch" style="background:#C8B99A;border:1px solid #8B7355;"></div>Timber furniture</div>
-      <div class="fp-legend-item"><div class="fp-swatch" style="background:#B5A898;border:1px solid #8B7A6A;"></div>Upholstered</div>
-      <div class="fp-legend-item"><div class="fp-swatch" style="background:#A89070;border:1px solid #7A6545;"></div>Sideboard &amp; chairs</div>
-      <div class="fp-legend-item"><div class="fp-swatch" style="border:1px dashed #C47C2B;"></div>Rug zone</div>
-      <div class="fp-legend-item"><div class="fp-swatch" style="background:#7A9E6A;border:1px solid #5A7A4A;"></div>Plants</div>
-    </div>
-    <p class="fp-note">Dining zone near kitchen dividing wall. TV mounted on right wall, sofa faces it directly. Garden door off kitchen bottom left. Dog bed near garden side of living area.</p>
+    <svg width="100%" viewBox="0 0 680 540" role="img"><title>1st storey layout</title><desc>Ground floor: helper's room top left beside stairs, kitchen below with hob and fridge, garden door bottom left of kitchen. Main hall with main door on top wall. Dining table bottom left of living area with sideboard on dividing wall. Sofa facing TV on right wall. Dog bed near garden side.</desc><defs><marker id="a1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+    <rect x="40" y="40" width="190" height="150" fill="#E8E0D0" stroke="#2C2416" stroke-width="2.5"/><text font-size="12" x="135" y="30" text-anchor="middle" fill="#9C8E7A">Helper's room</text><rect x="55" y="55" width="100" height="58" rx="5" fill="#B5A898" stroke="#8B7A6A" stroke-width="1"/><rect x="55" y="55" width="100" height="15" rx="4" fill="#8B7355" stroke="#6B5335" stroke-width="1"/><rect x="62" y="58" width="85" height="12" rx="3" fill="#D4C4B0" stroke="#A89880" stroke-width="0.5"/><text font-size="12" x="105" y="95" text-anchor="middle" fill="#3C2E20">single bed</text><rect x="55" y="155" width="110" height="26" rx="4" fill="#C8B898" stroke="#9C8870" stroke-width="1"/><text font-size="12" x="110" y="172" text-anchor="middle" fill="#4A3B28">storage</text><path d="M 230 160 A 32 32 0 0 0 198 128" fill="none" stroke="#9C8E7A" stroke-width="0.8" stroke-dasharray="3 2"/>
+    <rect x="40" y="190" width="190" height="250" fill="#EDE6D6" stroke="#2C2416" stroke-width="2.5"/><text font-size="12" x="110" y="212" text-anchor="middle" fill="#9C8E7A">Kitchen</text><rect x="50" y="200" width="130" height="26" rx="3" fill="#C8B99A" stroke="#8B7355" stroke-width="1"/><text font-size="12" x="115" y="217" text-anchor="middle" fill="#4A3B28">counter</text><rect x="183" y="198" width="38" height="55" rx="3" fill="#D8D0C4" stroke="#9C9088" stroke-width="1"/><text font-size="12" x="202" y="228" text-anchor="middle" fill="#5A5248">fridge</text><rect x="50" y="226" width="26" height="120" rx="3" fill="#C8B99A" stroke="#8B7355" stroke-width="1"/><rect x="52" y="268" width="22" height="36" rx="2" fill="#B5A888" stroke="#8B7A60" stroke-width="0.8"/><circle cx="58" cy="278" r="4" fill="none" stroke="#7A6A50" stroke-width="0.8"/><circle cx="68" cy="278" r="4" fill="none" stroke="#7A6A50" stroke-width="0.8"/><circle cx="58" cy="294" r="4" fill="none" stroke="#7A6A50" stroke-width="0.8"/><circle cx="68" cy="294" r="4" fill="none" stroke="#7A6A50" stroke-width="0.8"/><text font-size="12" x="100" y="290" fill="#4A3B28">hob</text><path d="M 230 300 A 32 32 0 0 0 198 268" fill="none" stroke="#9C8E7A" stroke-width="0.8" stroke-dasharray="3 2"/>
+    <rect x="40" y="432" width="55" height="6" rx="2" fill="#8B7355" stroke="#6B5335" stroke-width="1" opacity="0.5"/><path d="M 40 432 A 50 50 0 0 0 90 432" fill="none" stroke="#9C8E7A" stroke-width="0.8" stroke-dasharray="3 2"/><text font-size="12" x="65" y="452" text-anchor="middle" fill="#9C8E7A">garden door</text>
+    <rect x="230" y="40" width="75" height="120" fill="#D8D0C0" stroke="#2C2416" stroke-width="2"/><text font-size="12" x="267" y="100" text-anchor="middle" fill="#6B5E4A">stairs</text><line x1="230" y1="58" x2="305" y2="58" stroke="#9C8E7A" stroke-width="0.5"/><line x1="230" y1="74" x2="305" y2="74" stroke="#9C8E7A" stroke-width="0.5"/><line x1="230" y1="90" x2="305" y2="90" stroke="#9C8E7A" stroke-width="0.5"/><line x1="230" y1="106" x2="305" y2="106" stroke="#9C8E7A" stroke-width="0.5"/><line x1="230" y1="122" x2="305" y2="122" stroke="#9C8E7A" stroke-width="0.5"/>
+    <rect x="230" y="40" width="400" height="400" fill="#F5F0E8" stroke="#2C2416" stroke-width="2.5"/>
+    <rect x="305" y="38" width="55" height="6" rx="2" fill="#8B7355" stroke="#6B5335" stroke-width="1"/><path d="M 305 44 A 50 50 0 0 0 355 44" fill="none" stroke="#9C8E7A" stroke-width="0.8" stroke-dasharray="3 2"/><text font-size="12" x="330" y="63" text-anchor="middle" fill="#9C8E7A">main door</text>
+    <rect x="232" y="295" width="18" height="130" rx="3" fill="#A89070" stroke="#7A6545" stroke-width="1"/><text font-size="12" x="222" y="362" text-anchor="end" fill="#9C8E7A">sideboard</text>
+    <rect x="293" y="305" width="75" height="130" rx="6" fill="#C8B99A" stroke="#8B7355" stroke-width="1.2"/><text font-size="12" x="330" y="373" text-anchor="middle" fill="#4A3B28">dining</text><text font-size="12" x="330" y="386" text-anchor="middle" fill="#4A3B28">table</text>
+    <rect x="277" y="318" width="14" height="26" rx="3" fill="#A89070" stroke="#7A6545" stroke-width="0.5"/><rect x="277" y="358" width="14" height="26" rx="3" fill="#A89070" stroke="#7A6545" stroke-width="0.5"/><rect x="277" y="398" width="14" height="26" rx="3" fill="#A89070" stroke="#7A6545" stroke-width="0.5"/><rect x="370" y="318" width="14" height="26" rx="3" fill="#A89070" stroke="#7A6545" stroke-width="0.5"/><rect x="370" y="358" width="14" height="26" rx="3" fill="#A89070" stroke="#7A6545" stroke-width="0.5"/><rect x="370" y="398" width="14" height="26" rx="3" fill="#A89070" stroke="#7A6545" stroke-width="0.5"/><rect x="303" y="291" width="26" height="14" rx="3" fill="#A89070" stroke="#7A6545" stroke-width="0.5"/><rect x="340" y="291" width="26" height="14" rx="3" fill="#A89070" stroke="#7A6545" stroke-width="0.5"/><rect x="303" y="435" width="26" height="14" rx="3" fill="#A89070" stroke="#7A6545" stroke-width="0.5"/><rect x="340" y="435" width="26" height="14" rx="3" fill="#A89070" stroke="#7A6545" stroke-width="0.5"/>
+    <circle cx="330" cy="370" r="9" fill="none" stroke="#C47C2B" stroke-width="1.2"/><line x1="330" y1="40" x2="330" y2="361" stroke="#C47C2B" stroke-width="0.7" stroke-dasharray="3 2"/><text font-size="11" x="346" y="352" fill="#854F0B">pendant</text>
+    <rect x="619" y="175" width="10" height="90" rx="2" fill="#2C2416" stroke="#1A1408" stroke-width="0.5" opacity="0.85"/><rect x="594" y="183" width="34" height="74" rx="2" fill="#2C2416" stroke="#1A1408" stroke-width="0.5" opacity="0.8"/><text font-size="11" x="590" y="272" text-anchor="end" fill="#9C8E7A">TV (mounted)</text>
+    <rect x="390" y="185" width="65" height="170" rx="8" fill="#B5A898" stroke="#8B7A6A" stroke-width="1.2"/><rect x="390" y="185" width="16" height="170" rx="4" fill="#A89888" stroke="#8B7A6A" stroke-width="0.5"/><rect x="390" y="180" width="65" height="14" rx="5" fill="#A89888" stroke="#8B7A6A" stroke-width="0.8"/><rect x="390" y="351" width="65" height="14" rx="5" fill="#A89888" stroke="#8B7A6A" stroke-width="0.8"/><text font-size="12" x="428" y="275" text-anchor="middle" fill="#3C2E20">sofa</text>
+    <rect x="350" y="188" width="34" height="34" rx="5" fill="#C8B898" stroke="#9C8870" stroke-width="0.8"/><text font-size="12" x="367" y="209" text-anchor="middle" fill="#4A3B28">side</text>
+    <rect x="468" y="220" width="105" height="90" rx="6" fill="#D4C4A8" stroke="#9C8C78" stroke-width="1"/><text font-size="12" x="520" y="270" text-anchor="middle" fill="#4A3B28">coffee table</text>
+    <rect x="345" y="172" width="255" height="210" rx="10" fill="none" stroke="#C47C2B" stroke-width="1" stroke-dasharray="4 3" opacity="0.5"/>
+    <circle cx="390" cy="400" r="22" fill="#E8D4B8" stroke="#C4A87A" stroke-width="1"/><text font-size="12" x="390" y="396" text-anchor="middle" fill="#6B4A28">dog</text><text font-size="12" x="390" y="409" text-anchor="middle" fill="#6B4A28">bed</text>
+    <rect x="475" y="375" width="55" height="50" rx="10" fill="#C8B090" stroke="#9C8870" stroke-width="0.8"/><text font-size="12" x="502" y="405" text-anchor="middle" fill="#3C2E20">armchair</text>
+    <circle cx="600" cy="415" r="13" fill="#7A9E6A" stroke="#5A7A4A" stroke-width="0.8" opacity="0.8"/><text font-size="11" x="600" y="419" text-anchor="middle" fill="#F5F0E8">plant</text>
+    <line x1="620" y1="500" x2="620" y2="480" stroke="#9C8E7A" stroke-width="1.5" marker-end="url(#a1)"/><text font-size="11" x="620" y="516" text-anchor="middle" fill="#9C8E7A">N</text>
+    <text font-size="11" x="40" y="516" fill="#9C8E7A">1st storey · 63.8 sqm · not to exact scale</text></svg>
+    <div class="fp-legend"><div class="fp-legend-item"><div class="fp-swatch" style="background:#C8B99A;border:1px solid #8B7355;"></div>Timber furniture</div><div class="fp-legend-item"><div class="fp-swatch" style="background:#B5A898;border:1px solid #8B7A6A;"></div>Upholstered</div><div class="fp-legend-item"><div class="fp-swatch" style="background:#A89070;border:1px solid #7A6545;"></div>Sideboard &amp; chairs</div><div class="fp-legend-item"><div class="fp-swatch" style="border:1px dashed #C47C2B;"></div>Rug zone</div><div class="fp-legend-item"><div class="fp-swatch" style="background:#7A9E6A;border:1px solid #5A7A4A;"></div>Plants</div></div>
+    <p class="fp-note">Castlery Sloane dining table + RÅDMANSÖ sideboard zone on left. TV mounted on right wall, sofa faces it. Garden door off kitchen bottom left.</p>
   </div>
-
-  <!-- 2ND STOREY -->
   <div class="fp-pane" id="f2">
-    <svg width="100%" viewBox="0 0 680 500" role="img">
-      <title>2nd storey layout — v4 final</title>
-      <desc>Upper floor. Left to right flush: mum's room, master bedroom, WC, shower. Long corridor below all rooms. Stairs and store room bottom right accessed from corridor.</desc>
-      <defs><marker id="a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
-      <!-- Mum's room -->
-      <rect x="40" y="40" width="190" height="240" fill="#EDE6D6" stroke="#2C2416" stroke-width="2.5"/>
-      <text font-size="12" x="135" y="30" text-anchor="middle" fill="#9C8E7A">Mum's room</text>
-      <rect x="216" y="42" width="12" height="236" rx="2" fill="#C8B898" stroke="#9C8870" stroke-width="1"/>
-      <text font-size="11" x="200" y="162" text-anchor="end" fill="#9C8E7A">wardrobe</text>
-      <rect x="60" y="58" width="118" height="95" rx="7" fill="#B5A898" stroke="#8B7A6A" stroke-width="1.2"/>
-      <rect x="60" y="53" width="118" height="16" rx="4" fill="#8B7355" stroke="#6B5335" stroke-width="1"/>
-      <rect x="68" y="59" width="46" height="14" rx="3" fill="#D4C4B0" stroke="#A89880" stroke-width="0.5"/>
-      <rect x="122" y="59" width="46" height="14" rx="3" fill="#D4C4B0" stroke="#A89880" stroke-width="0.5"/>
-      <text font-size="12" x="119" y="110" text-anchor="middle" fill="#3C2E20">queen bed</text>
-      <rect x="182" y="60" width="24" height="26" rx="3" fill="#C8B898" stroke="#9C8870" stroke-width="0.8"/>
-      <circle cx="194" cy="70" r="5" fill="none" stroke="#C47C2B" stroke-width="1"/>
-      <line x1="60" y1="156" x2="145" y2="156" stroke="#C47C2B" stroke-width="2" stroke-linecap="round"/>
-      <text font-size="11" x="102" y="168" text-anchor="middle" fill="#854F0B">grab bar</text>
-      <rect x="80" y="225" width="100" height="16" rx="3" fill="#8B7355" stroke="#6B5335" stroke-width="1"/>
-      <rect x="90" y="209" width="80" height="16" rx="2" fill="#2C2416" stroke="#1A1408" stroke-width="0.5" opacity="0.85"/>
-      <text font-size="11" x="130" y="221" text-anchor="middle" fill="#F5F0E8">TV</text>
-      <text font-size="11" x="130" y="233" text-anchor="middle" fill="#F5F0E8">console</text>
-      <rect x="48" y="175" width="46" height="44" rx="4" fill="#D4C4A8" stroke="#9C8C78" stroke-width="1"/>
-      <text font-size="12" x="71" y="200" text-anchor="middle" fill="#4A3B28">vanity</text>
-      <rect x="50" y="161" width="40" height="15" rx="3" fill="#B5D4D0" stroke="#7AB0A8" stroke-width="0.8" opacity="0.7"/>
-      <text font-size="11" x="70" y="172" text-anchor="middle" fill="#085041">mirror</text>
-      <rect x="55" y="219" width="30" height="20" rx="8" fill="#B5A898" stroke="#8B7A6A" stroke-width="0.7"/>
-      <circle cx="135" cy="165" r="8" fill="none" stroke="#C47C2B" stroke-width="1.1"/>
-      <line x1="135" y1="40" x2="135" y2="157" stroke="#C47C2B" stroke-width="0.7" stroke-dasharray="3 2"/>
-      <rect x="110" y="278" width="34" height="4" rx="1" fill="#9C8E7A" opacity="0.3"/>
-      <path d="M 110 280 A 34 34 0 0 0 144 280" fill="none" stroke="#9C8E7A" stroke-width="0.8" stroke-dasharray="3 2"/>
-      <!-- Master bedroom -->
-      <rect x="230" y="40" width="200" height="240" fill="#F5F0E8" stroke="#2C2416" stroke-width="2.5"/>
-      <text font-size="12" x="330" y="30" text-anchor="middle" fill="#9C8E7A">Your room · Master</text>
-      <rect x="230" y="42" width="14" height="236" rx="2" fill="#C8B898" stroke="#9C8870" stroke-width="1"/>
-      <text font-size="11" x="256" y="162" text-anchor="start" fill="#9C8E7A">wardrobe</text>
-      <rect x="268" y="58" width="118" height="95" rx="7" fill="#B5A898" stroke="#8B7A6A" stroke-width="1.5"/>
-      <rect x="268" y="53" width="118" height="16" rx="4" fill="#8B7355" stroke="#6B5335" stroke-width="1"/>
-      <rect x="276" y="59" width="46" height="14" rx="3" fill="#D4C4B0" stroke="#A89880" stroke-width="0.5"/>
-      <rect x="332" y="59" width="46" height="14" rx="3" fill="#D4C4B0" stroke="#A89880" stroke-width="0.5"/>
-      <text font-size="12" x="327" y="110" text-anchor="middle" fill="#3C2E20">queen bed</text>
-      <rect x="248" y="58" width="22" height="28" rx="3" fill="#C8B898" stroke="#9C8870" stroke-width="0.8"/>
-      <rect x="388" y="58" width="22" height="28" rx="3" fill="#C8B898" stroke="#9C8870" stroke-width="0.8"/>
-      <circle cx="259" cy="67" r="5" fill="none" stroke="#C47C2B" stroke-width="1"/>
-      <circle cx="399" cy="67" r="5" fill="none" stroke="#C47C2B" stroke-width="1"/>
-      <rect x="278" y="268" width="104" height="10" rx="2" fill="#2C2416" stroke="#1A1408" stroke-width="0.5" opacity="0.85"/>
-      <text font-size="11" x="330" y="264" text-anchor="middle" fill="#9C8E7A">TV (mounted)</text>
-      <rect x="392" y="160" width="36" height="90" rx="4" fill="#D4C4A8" stroke="#9C8C78" stroke-width="1"/>
-      <text font-size="11" x="410" y="208" text-anchor="middle" fill="#4A3B28" transform="rotate(-90 410 208)">desk/vanity</text>
-      <rect x="394" y="143" width="32" height="18" rx="3" fill="#B5D4D0" stroke="#7AB0A8" stroke-width="0.8" opacity="0.7"/>
-      <text font-size="11" x="410" y="155" text-anchor="middle" fill="#085041">mirror</text>
-      <rect x="397" y="250" width="28" height="22" rx="8" fill="#B5A898" stroke="#8B7A6A" stroke-width="0.7"/>
-      <circle cx="330" cy="170" r="8" fill="none" stroke="#C47C2B" stroke-width="1.1"/>
-      <line x1="330" y1="40" x2="330" y2="162" stroke="#C47C2B" stroke-width="0.7" stroke-dasharray="3 2"/>
-      <rect x="426" y="246" width="4" height="36" rx="1" fill="#9C8E7A" opacity="0.4"/>
-      <path d="M 430 246 A 36 36 0 0 1 430 282" fill="none" stroke="#9C8E7A" stroke-width="0.8" stroke-dasharray="3 2"/>
-      <text font-size="11" x="438" y="295" fill="#9C8E7A">door</text>
-      <!-- WC -->
-      <rect x="430" y="40" width="100" height="240" fill="#EAE0D5" stroke="#2C2416" stroke-width="2.5"/>
-      <text font-size="12" x="480" y="30" text-anchor="middle" fill="#9C8E7A">WC</text>
-      <rect x="450" y="80" width="58" height="75" rx="10" fill="#D4C8B8" stroke="#A09080" stroke-width="1"/>
-      <rect x="450" y="80" width="58" height="22" rx="6" fill="#C0B4A0" stroke="#A09080" stroke-width="0.8"/>
-      <text font-size="12" x="479" y="127" text-anchor="middle" fill="#5A4A38">toilet</text>
-      <rect x="452" y="185" width="50" height="38" rx="8" fill="#B5D4C8" stroke="#7AB0A0" stroke-width="0.8"/>
-      <text font-size="12" x="477" y="208" text-anchor="middle" fill="#085041">basin</text>
-      <rect x="444" y="276" width="36" height="4" rx="1" fill="#9C8E7A" opacity="0.3"/>
-      <path d="M 444 280 A 32 32 0 0 0 476 280" fill="none" stroke="#9C8E7A" stroke-width="0.8" stroke-dasharray="3 2"/>
-      <!-- Shower -->
-      <rect x="530" y="40" width="100" height="240" fill="#E0EDE8" stroke="#2C2416" stroke-width="2.5"/>
-      <text font-size="12" x="580" y="30" text-anchor="middle" fill="#9C8E7A">Shower</text>
-      <rect x="542" y="55" width="76" height="155" rx="6" fill="#9FD4C0" stroke="#6DAAA0" stroke-width="1"/>
-      <circle cx="580" cy="72" r="6" fill="#6DAAA0" stroke="#4A9080" stroke-width="0.8"/>
-      <text font-size="12" x="580" y="140" text-anchor="middle" fill="#085041">shower</text>
-      <rect x="544" y="276" width="36" height="4" rx="1" fill="#9C8E7A" opacity="0.3"/>
-      <path d="M 544 280 A 32 32 0 0 0 576 280" fill="none" stroke="#9C8E7A" stroke-width="0.8" stroke-dasharray="3 2"/>
-      <!-- Corridor -->
-      <rect x="40" y="280" width="590" height="80" fill="#E8E4DC" stroke="#2C2416" stroke-width="2.5"/>
-      <text font-size="12" x="300" y="326" text-anchor="middle" fill="#9C8E7A">corridor</text>
-      <!-- Store room -->
-      <rect x="430" y="360" width="100" height="110" fill="#EDE6D6" stroke="#2C2416" stroke-width="2"/>
-      <text font-size="12" x="480" y="418" text-anchor="middle" fill="#9C8E7A">store</text>
-      <text font-size="12" x="480" y="432" text-anchor="middle" fill="#9C8E7A">room</text>
-      <!-- Staircase -->
-      <rect x="530" y="360" width="100" height="110" fill="#D8D0C0" stroke="#2C2416" stroke-width="2"/>
-      <text font-size="12" x="580" y="415" text-anchor="middle" fill="#6B5E4A">stairs</text>
-      <line x1="530" y1="376" x2="630" y2="376" stroke="#9C8E7A" stroke-width="0.5"/>
-      <line x1="530" y1="392" x2="630" y2="392" stroke="#9C8E7A" stroke-width="0.5"/>
-      <line x1="530" y1="408" x2="630" y2="408" stroke="#9C8E7A" stroke-width="0.5"/>
-      <line x1="530" y1="424" x2="630" y2="424" stroke="#9C8E7A" stroke-width="0.5"/>
-      <line x1="530" y1="440" x2="630" y2="440" stroke="#9C8E7A" stroke-width="0.5"/>
-      <line x1="530" y1="456" x2="630" y2="456" stroke="#9C8E7A" stroke-width="0.5"/>
-      <!-- N arrow -->
-      <line x1="650" y1="460" x2="650" y2="440" stroke="#9C8E7A" stroke-width="1.5" marker-end="url(#a2)"/>
-      <text font-size="11" x="650" y="476" text-anchor="middle" fill="#9C8E7A">N</text>
-      <text font-size="11" x="40" y="476" fill="#9C8E7A">2nd storey · 63.5 sqm · not to exact scale</text>
-    </svg>
-    <div class="fp-legend">
-      <div class="fp-legend-item"><div class="fp-swatch" style="background:#B5A898;border:1px solid #8B7A6A;"></div>Beds &amp; upholstery</div>
-      <div class="fp-legend-item"><div class="fp-swatch" style="background:#C8B898;border:1px solid #9C8870;"></div>Full-wall wardrobes</div>
-      <div class="fp-legend-item"><div class="fp-swatch" style="background:#D4C4A8;border:1px solid #9C8C78;"></div>Desk / vanity</div>
-      <div class="fp-legend-item"><div class="fp-swatch" style="background:#9FD4C0;border:1px solid #6DAAA0;"></div>Wet areas</div>
-      <div class="fp-legend-item"><div class="fp-swatch" style="border:1px solid #C47C2B;background:#FDF3E3;"></div>Lighting</div>
-    </div>
-    <p class="fp-note">All rooms flush in one line. Long corridor runs full width. Stairs and store on the right side. Your door opens from the right into the corridor.</p>
+    <svg width="100%" viewBox="0 0 680 500" role="img"><title>2nd storey layout</title><desc>Upper floor. Left to right flush: mum's room, master bedroom, WC, shower. Long corridor below all rooms. Stairs and store room bottom right.</desc><defs><marker id="a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+    <rect x="40" y="40" width="190" height="240" fill="#EDE6D6" stroke="#2C2416" stroke-width="2.5"/><text font-size="12" x="135" y="30" text-anchor="middle" fill="#9C8E7A">Mum's room</text><rect x="216" y="42" width="12" height="236" rx="2" fill="#C8B898" stroke="#9C8870" stroke-width="1"/><text font-size="11" x="200" y="162" text-anchor="end" fill="#9C8E7A">wardrobe</text><rect x="60" y="58" width="118" height="95" rx="7" fill="#B5A898" stroke="#8B7A6A" stroke-width="1.2"/><rect x="60" y="53" width="118" height="16" rx="4" fill="#8B7355" stroke="#6B5335" stroke-width="1"/><rect x="68" y="59" width="46" height="14" rx="3" fill="#D4C4B0" stroke="#A89880" stroke-width="0.5"/><rect x="122" y="59" width="46" height="14" rx="3" fill="#D4C4B0" stroke="#A89880" stroke-width="0.5"/><text font-size="12" x="119" y="110" text-anchor="middle" fill="#3C2E20">queen bed</text><rect x="182" y="60" width="24" height="26" rx="3" fill="#C8B898" stroke="#9C8870" stroke-width="0.8"/><circle cx="194" cy="70" r="5" fill="none" stroke="#C47C2B" stroke-width="1"/><line x1="60" y1="156" x2="145" y2="156" stroke="#C47C2B" stroke-width="2" stroke-linecap="round"/><text font-size="11" x="102" y="168" text-anchor="middle" fill="#854F0B">grab bar</text><rect x="80" y="225" width="100" height="16" rx="3" fill="#8B7355" stroke="#6B5335" stroke-width="1"/><rect x="90" y="209" width="80" height="16" rx="2" fill="#2C2416" stroke="#1A1408" stroke-width="0.5" opacity="0.85"/><text font-size="11" x="130" y="221" text-anchor="middle" fill="#F5F0E8">TV</text><text font-size="11" x="130" y="233" text-anchor="middle" fill="#F5F0E8">console</text><rect x="48" y="175" width="46" height="44" rx="4" fill="#D4C4A8" stroke="#9C8C78" stroke-width="1"/><text font-size="12" x="71" y="200" text-anchor="middle" fill="#4A3B28">vanity</text><rect x="50" y="161" width="40" height="15" rx="3" fill="#B5D4D0" stroke="#7AB0A8" stroke-width="0.8" opacity="0.7"/><rect x="55" y="219" width="30" height="20" rx="8" fill="#B5A898" stroke="#8B7A6A" stroke-width="0.7"/><circle cx="135" cy="165" r="8" fill="none" stroke="#C47C2B" stroke-width="1.1"/><line x1="135" y1="40" x2="135" y2="157" stroke="#C47C2B" stroke-width="0.7" stroke-dasharray="3 2"/><rect x="110" y="278" width="34" height="4" rx="1" fill="#9C8E7A" opacity="0.3"/><path d="M 110 280 A 34 34 0 0 0 144 280" fill="none" stroke="#9C8E7A" stroke-width="0.8" stroke-dasharray="3 2"/>
+    <rect x="230" y="40" width="200" height="240" fill="#F5F0E8" stroke="#2C2416" stroke-width="2.5"/><text font-size="12" x="330" y="30" text-anchor="middle" fill="#9C8E7A">Your room · Master</text><rect x="230" y="42" width="14" height="236" rx="2" fill="#C8B898" stroke="#9C8870" stroke-width="1"/><text font-size="11" x="256" y="162" text-anchor="start" fill="#9C8E7A">wardrobe</text><rect x="268" y="58" width="118" height="95" rx="7" fill="#B5A898" stroke="#8B7A6A" stroke-width="1.5"/><rect x="268" y="53" width="118" height="16" rx="4" fill="#8B7355" stroke="#6B5335" stroke-width="1"/><rect x="276" y="59" width="46" height="14" rx="3" fill="#D4C4B0" stroke="#A89880" stroke-width="0.5"/><rect x="332" y="59" width="46" height="14" rx="3" fill="#D4C4B0" stroke="#A89880" stroke-width="0.5"/><text font-size="12" x="327" y="110" text-anchor="middle" fill="#3C2E20">queen bed</text><rect x="248" y="58" width="22" height="28" rx="3" fill="#C8B898" stroke="#9C8870" stroke-width="0.8"/><rect x="388" y="58" width="22" height="28" rx="3" fill="#C8B898" stroke="#9C8870" stroke-width="0.8"/><circle cx="259" cy="67" r="5" fill="none" stroke="#C47C2B" stroke-width="1"/><circle cx="399" cy="67" r="5" fill="none" stroke="#C47C2B" stroke-width="1"/><rect x="278" y="268" width="104" height="10" rx="2" fill="#2C2416" stroke="#1A1408" stroke-width="0.5" opacity="0.85"/><text font-size="11" x="330" y="264" text-anchor="middle" fill="#9C8E7A">TV (mounted)</text><rect x="392" y="160" width="36" height="90" rx="4" fill="#D4C4A8" stroke="#9C8C78" stroke-width="1"/><text font-size="11" x="410" y="208" text-anchor="middle" fill="#4A3B28" transform="rotate(-90 410 208)">desk/vanity</text><rect x="394" y="143" width="32" height="18" rx="3" fill="#B5D4D0" stroke="#7AB0A8" stroke-width="0.8" opacity="0.7"/><rect x="397" y="250" width="28" height="22" rx="8" fill="#B5A898" stroke="#8B7A6A" stroke-width="0.7"/><circle cx="330" cy="170" r="8" fill="none" stroke="#C47C2B" stroke-width="1.1"/><line x1="330" y1="40" x2="330" y2="162" stroke="#C47C2B" stroke-width="0.7" stroke-dasharray="3 2"/><rect x="426" y="246" width="4" height="36" rx="1" fill="#9C8E7A" opacity="0.4"/><path d="M 430 246 A 36 36 0 0 1 430 282" fill="none" stroke="#9C8E7A" stroke-width="0.8" stroke-dasharray="3 2"/><text font-size="11" x="438" y="295" fill="#9C8E7A">door</text>
+    <rect x="430" y="40" width="100" height="240" fill="#EAE0D5" stroke="#2C2416" stroke-width="2.5"/><text font-size="12" x="480" y="30" text-anchor="middle" fill="#9C8E7A">WC</text><rect x="450" y="80" width="58" height="75" rx="10" fill="#D4C8B8" stroke="#A09080" stroke-width="1"/><rect x="450" y="80" width="58" height="22" rx="6" fill="#C0B4A0" stroke="#A09080" stroke-width="0.8"/><text font-size="12" x="479" y="127" text-anchor="middle" fill="#5A4A38">toilet</text><rect x="452" y="185" width="50" height="38" rx="8" fill="#B5D4C8" stroke="#7AB0A0" stroke-width="0.8"/><text font-size="12" x="477" y="208" text-anchor="middle" fill="#085041">basin</text><rect x="444" y="276" width="36" height="4" rx="1" fill="#9C8E7A" opacity="0.3"/><path d="M 444 280 A 32 32 0 0 0 476 280" fill="none" stroke="#9C8E7A" stroke-width="0.8" stroke-dasharray="3 2"/>
+    <rect x="530" y="40" width="100" height="240" fill="#E0EDE8" stroke="#2C2416" stroke-width="2.5"/><text font-size="12" x="580" y="30" text-anchor="middle" fill="#9C8E7A">Shower</text><rect x="542" y="55" width="76" height="155" rx="6" fill="#9FD4C0" stroke="#6DAAA0" stroke-width="1"/><circle cx="580" cy="72" r="6" fill="#6DAAA0" stroke="#4A9080" stroke-width="0.8"/><text font-size="12" x="580" y="140" text-anchor="middle" fill="#085041">shower</text><rect x="544" y="276" width="36" height="4" rx="1" fill="#9C8E7A" opacity="0.3"/><path d="M 544 280 A 32 32 0 0 0 576 280" fill="none" stroke="#9C8E7A" stroke-width="0.8" stroke-dasharray="3 2"/>
+    <rect x="40" y="280" width="590" height="80" fill="#E8E4DC" stroke="#2C2416" stroke-width="2.5"/><text font-size="12" x="300" y="326" text-anchor="middle" fill="#9C8E7A">corridor</text>
+    <rect x="430" y="360" width="100" height="110" fill="#EDE6D6" stroke="#2C2416" stroke-width="2"/><text font-size="12" x="480" y="418" text-anchor="middle" fill="#9C8E7A">store</text><text font-size="12" x="480" y="432" text-anchor="middle" fill="#9C8E7A">room</text>
+    <rect x="530" y="360" width="100" height="110" fill="#D8D0C0" stroke="#2C2416" stroke-width="2"/><text font-size="12" x="580" y="410" text-anchor="middle" fill="#6B5E4A">stairs</text><line x1="530" y1="376" x2="630" y2="376" stroke="#9C8E7A" stroke-width="0.5"/><line x1="530" y1="392" x2="630" y2="392" stroke="#9C8E7A" stroke-width="0.5"/><line x1="530" y1="408" x2="630" y2="408" stroke="#9C8E7A" stroke-width="0.5"/><line x1="530" y1="424" x2="630" y2="424" stroke="#9C8E7A" stroke-width="0.5"/><line x1="530" y1="440" x2="630" y2="440" stroke="#9C8E7A" stroke-width="0.5"/><line x1="530" y1="456" x2="630" y2="456" stroke="#9C8E7A" stroke-width="0.5"/>
+    <line x1="650" y1="460" x2="650" y2="440" stroke="#9C8E7A" stroke-width="1.5" marker-end="url(#a2)"/><text font-size="11" x="650" y="476" text-anchor="middle" fill="#9C8E7A">N</text>
+    <text font-size="11" x="40" y="476" fill="#9C8E7A">2nd storey · 63.5 sqm · not to exact scale</text></svg>
+    <div class="fp-legend"><div class="fp-legend-item"><div class="fp-swatch" style="background:#B5A898;border:1px solid #8B7A6A;"></div>Beds &amp; upholstery</div><div class="fp-legend-item"><div class="fp-swatch" style="background:#C8B898;border:1px solid #9C8870;"></div>Full-wall wardrobes</div><div class="fp-legend-item"><div class="fp-swatch" style="background:#D4C4A8;border:1px solid #9C8C78;"></div>Desk / vanity</div><div class="fp-legend-item"><div class="fp-swatch" style="background:#9FD4C0;border:1px solid #6DAAA0;"></div>Wet areas</div><div class="fp-legend-item"><div class="fp-swatch" style="border:1px solid #C47C2B;background:#FDF3E3;"></div>Lighting</div></div>
+    <p class="fp-note">All rooms flush in one line. Long corridor below. Stairs and store on the right. Your door opens right into corridor.</p>
   </div>
 </div>
 
-<!-- ══════════════════════════ VENDOR QUOTES ══════════════════════════ -->
+<!-- ══════ BUDGET TRACKER ══════ -->
+<div class="page" id="page-budget">
+  <div class="tab-row" style="margin-top:.5rem;">
+    <button class="tab-btn active" onclick="switchInner('bgt','add',this)">+ Add item</button>
+    <button class="tab-btn" onclick="switchInner('bgt','all',this)">All items</button>
+    <button class="tab-btn" onclick="switchInner('bgt','summary',this)">Summary</button>
+  </div>
+  <div class="inner-pane active" id="bgt-add">
+    <div class="card">
+      <div class="form-grid">
+        <div class="form-group" style="grid-column:span 2;"><span class="form-label">Item name</span><input type="text" id="b-name" placeholder="e.g. Castlery Sloane dining table"/></div>
+        <div class="form-group"><span class="form-label">Category</span><select id="b-cat"><option value="dining">Dining area</option><option value="living">Living area</option><option value="master">Master bedroom</option><option value="mum">Mum's bedroom</option><option value="helper">Helper's room</option><option value="lighting">Lighting</option><option value="decor">Decor &amp; soft furnishings</option><option value="services">Vendor services</option><option value="other">Other</option></select></div>
+        <div class="form-group"><span class="form-label">Status</span><select id="b-status"><option value="buy">To buy</option><option value="owned">Already owned</option><option value="tbd">TBD / to quote</option></select></div>
+      </div>
+      <div class="form-grid">
+        <div class="form-group"><span class="form-label">Price (S$)</span><input type="number" id="b-price" placeholder="0" min="0" step="1"/></div>
+        <div class="form-group"><span class="form-label">Qty</span><input type="number" id="b-qty" placeholder="1" min="1" value="1"/></div>
+        <div class="form-group"><span class="form-label">Price type</span><select id="b-ptype"><option value="exact">Exact</option><option value="est">Estimate</option><option value="min">Min of range</option><option value="max">Max of range</option></select></div>
+        <div class="form-group"><span class="form-label">Notes / source</span><input type="text" id="b-notes" placeholder="e.g. castlery.com/sg"/></div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-teal" onclick="bAddItem()"><i class="ti ti-plus"></i> Add item</button>
+        <button class="btn" onclick="bLoadDefaults()">Load my confirmed items</button>
+      </div>
+    </div>
+  </div>
+  <div class="inner-pane" id="bgt-all"><div id="bgt-list"><div class="empty-state"><i class="ti ti-inbox"></i>No items yet. Add your first one above.</div></div></div>
+  <div class="inner-pane" id="bgt-summary"><div id="bgt-summary-content"><div class="empty-state"><i class="ti ti-chart-bar"></i>Add items to see your summary.</div></div></div>
+</div>
+
+<!-- ══════ VENDOR QUOTES ══════ -->
 <div class="page" id="page-vendors">
   <div class="tab-row" style="margin-top:.5rem;">
     <button class="tab-btn active" onclick="switchInner('vendors','add',this)"><i class="ti ti-plus"></i> Add quote</button>
@@ -512,27 +292,8 @@ footer{text-align:center;padding:2rem;font-size:12px;color:var(--ink-light);bord
     <button class="tab-btn" onclick="switchInner('vendors','compare',this)"><i class="ti ti-scale"></i> Compare</button>
     <button class="tab-btn" onclick="switchInner('vendors','summary',this)"><i class="ti ti-chart-bar"></i> Summary</button>
   </div>
-  <div class="inner-pane active" id="vendors-add">
-    <div class="card">
-      <div class="form-grid">
-        <div class="form-group"><span class="form-label">Category</span><select id="f-cat"><option value="pest">Pest control</option><option value="garden">Gardening</option><option value="lighting">Lighting</option><option value="electrician">Electrician</option><option value="furniture">Furniture</option><option value="other">Other</option></select></div>
-        <div class="form-group"><span class="form-label">Vendor / company name</span><input type="text" id="f-vendor" placeholder="e.g. Rentokil"/></div>
-        <div class="form-group"><span class="form-label">Contact name</span><input type="text" id="f-contact" placeholder="optional"/></div>
-      </div>
-      <div class="form-grid">
-        <div class="form-group"><span class="form-label">Quote amount (S$)</span><input type="number" id="f-price" placeholder="0" min="0" step="0.01"/></div>
-        <div class="form-group"><span class="form-label">Type</span><select id="f-type"><option value="one-time">One-time</option><option value="monthly">Monthly</option><option value="quarterly">Quarterly</option><option value="annual">Annual</option><option value="per-visit">Per visit</option></select></div>
-        <div class="form-group"><span class="form-label">Valid until</span><input type="date" id="f-valid"/></div>
-      </div>
-      <div class="form-group" style="margin-bottom:8px;"><span class="form-label">Scope / what's included</span><textarea id="f-scope" placeholder="e.g. Termite + cockroach treatment, 3-room coverage, warranty included..."></textarea></div>
-      <div class="form-group"><span class="form-label">Notes / concerns</span><textarea id="f-notes" placeholder="e.g. No NEA cert shown, need to verify."></textarea></div>
-      <div class="btn-row">
-        <button class="btn btn-teal" onclick="addQuote()"><i class="ti ti-plus"></i> Add quote</button>
-        <button class="btn" onclick="loadSample()">Load sample data</button>
-      </div>
-    </div>
-  </div>
-  <div class="inner-pane" id="vendors-all"><div id="all-list"><div class="empty-state"><i class="ti ti-inbox"></i>No quotes yet. Add your first one.</div></div></div>
+  <div class="inner-pane active" id="vendors-add"><div class="card"><div class="form-grid"><div class="form-group"><span class="form-label">Category</span><select id="f-cat"><option value="pest">Pest control</option><option value="garden">Gardening</option><option value="lighting">Lighting</option><option value="electrician">Electrician</option><option value="furniture">Furniture</option><option value="other">Other</option></select></div><div class="form-group"><span class="form-label">Vendor name</span><input type="text" id="f-vendor" placeholder="e.g. Rentokil"/></div><div class="form-group"><span class="form-label">Contact name</span><input type="text" id="f-contact" placeholder="optional"/></div></div><div class="form-grid"><div class="form-group"><span class="form-label">Quote amount (S$)</span><input type="number" id="f-price" placeholder="0" min="0" step="0.01"/></div><div class="form-group"><span class="form-label">Type</span><select id="f-type"><option value="one-time">One-time</option><option value="monthly">Monthly</option><option value="quarterly">Quarterly</option><option value="annual">Annual</option><option value="per-visit">Per visit</option></select></div><div class="form-group"><span class="form-label">Valid until</span><input type="date" id="f-valid"/></div></div><div class="form-group" style="margin-bottom:8px;"><span class="form-label">Scope / what's included</span><textarea id="f-scope" placeholder="e.g. Termite + cockroach treatment, 3-room coverage, warranty included..."></textarea></div><div class="form-group"><span class="form-label">Notes / concerns</span><textarea id="f-notes" placeholder="e.g. No NEA cert shown, need to verify."></textarea></div><div class="btn-row"><button class="btn btn-teal" onclick="addQuote()"><i class="ti ti-plus"></i> Add quote</button><button class="btn" onclick="loadSample()">Load sample data</button></div></div></div>
+  <div class="inner-pane" id="vendors-all"><div id="all-list"><div class="empty-state"><i class="ti ti-inbox"></i>No quotes yet.</div></div></div>
   <div class="inner-pane" id="vendors-compare"><div id="compare-list"><div class="empty-state"><i class="ti ti-scale"></i>Add at least 2 quotes in the same category to compare.</div></div></div>
   <div class="inner-pane" id="vendors-summary"><div id="summary-content"><div class="empty-state"><i class="ti ti-chart-bar"></i>Add quotes to see your summary.</div></div></div>
 </div>
@@ -541,155 +302,49 @@ footer{text-align:center;padding:2rem;font-size:12px;color:var(--ink-light);bord
 <footer>1 Jalan Gajus Home Project &copy; 2026 &middot; Built with Claude</footer>
 
 <script>
-/* ── Navigation ── */
-function showPage(name,btn){
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
-  document.getElementById('page-'+name).classList.add('active');
-  btn.classList.add('active');
-}
-function switchInner(page,pane,btn){
-  const prefix=page+'-';
-  document.querySelectorAll('[id^="'+prefix+'"]').forEach(p=>{if(p.classList.contains('inner-pane'))p.classList.remove('active');});
-  btn.parentElement.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-  document.getElementById(prefix+pane).classList.add('active');
-  btn.classList.add('active');
-  if(pane==='all')renderAll();
-  if(pane==='compare')renderCompare();
-  if(pane==='summary')renderSummary();
-}
-function togglePhase(card){
-  const body=card.querySelector('.phase-body');
-  const icon=card.querySelector('.ti-chevron-down');
-  body.classList.toggle('open');
-  if(icon)icon.style.transform=body.classList.contains('open')?'rotate(180deg)':'';
-}
-function showFloor(id,btn){
-  document.querySelectorAll('.fp-pane').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.ftab').forEach(b=>b.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  btn.classList.add('active');
-}
+const BUDGET=30000;
+const CAT_LABELS={dining:'Dining area',living:'Living area',master:'Master bedroom',mum:"Mum's bedroom",helper:"Helper's room",lighting:'Lighting',decor:'Decor & soft furnishings',services:'Vendor services',other:'Other'};
+const CAT_COLORS={dining:'#7A5330',living:'#378ADD',master:'#7F77DD',mum:'#D4537E',helper:'#3A7048',lighting:'#C47C2B',decor:'#5DCAA5',services:'#B04535',other:'#888780'};
+
+/* ── Nav ── */
+function showPage(name,btn){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));document.getElementById('page-'+name).classList.add('active');btn.classList.add('active');}
+function switchInner(page,pane,btn){const prefix=page+'-';document.querySelectorAll('[id^="'+prefix+'"]').forEach(p=>{if(p.classList.contains('inner-pane'))p.classList.remove('active');});btn.parentElement.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));document.getElementById(prefix+pane).classList.add('active');btn.classList.add('active');if(page==='vendors'){if(pane==='all')renderAll();if(pane==='compare')renderCompare();if(pane==='summary')renderVSummary();}if(page==='bgt'){if(pane==='all')bRenderAll();if(pane==='summary')bRenderSummary();}}
+function togglePhase(card){const body=card.querySelector('.phase-body');const icon=card.querySelector('.ti-chevron-down');body.classList.toggle('open');if(icon)icon.style.transform=body.classList.contains('open')?'rotate(180deg)':'';}
+function showFloor(id,btn){document.querySelectorAll('.fp-pane').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.ftab').forEach(b=>b.classList.remove('active'));document.getElementById(id).classList.add('active');btn.classList.add('active');}
 
 /* ── Checklist ── */
-const checkTasks=[
-  {w:'Week 1',t:'Walk and measure all rooms'},
-  {w:'Week 1',t:'Book pest control inspection'},
-  {w:'Week 1',t:'Audit existing lighting and power points'},
-  {w:'Week 1',t:'List fixtures to keep / replace / remove'},
-  {w:'Week 1',t:'Walk the garden — assess condition'},
-  {w:'Week 1',t:'Get 3 pest control quotes'},
-  {w:'Week 1',t:'Get 3 gardening vendor quotes'},
-  {w:'Week 1–2',t:'Finalise room allocation'},
-  {w:'Week 1–2',t:'Design lighting plan by room'},
-  {w:'Week 1–2',t:'Plan dog-friendly zone near garden door'},
-  {w:'Week 1–2',t:'Confirm grab bars for mum — bedside and bathroom'},
-  {w:'Week 2',t:'Source and order lighting fixtures'},
-  {w:'Week 2',t:'Book EMA-licensed electrician'},
-  {w:'Week 2',t:'Confirm pest control treatment booking'},
-  {w:'Week 2–3',t:'Pest control treatment completed'},
-  {w:'Week 2–3',t:'First gardening session done'},
-  {w:'Week 2–3',t:'Set up recurring garden schedule'},
-  {w:'Week 2–3',t:'Electrician installs fixtures and dimmers'},
-  {w:'Week 3',t:'Furniture ordered / delivery scheduled'},
-  {w:'Week 3–4',t:'Furniture in place'},
-  {w:'Week 3–4',t:'Decor and soft furnishings arranged'},
-  {w:'Week 4',t:'Dog area set up, garden fencing checked'},
-  {w:'Week 4',t:'Snagging walkthrough done'},
-];
+const checkTasks=[{w:'Week 1',t:'Walk and measure all rooms'},{w:'Week 1',t:'Book pest control inspection'},{w:'Week 1',t:'Audit existing lighting and power points'},{w:'Week 1',t:'List fixtures to keep / replace / remove'},{w:'Week 1',t:'Walk the garden — assess condition'},{w:'Week 1',t:'Get 3 pest control quotes'},{w:'Week 1',t:'Get 3 gardening vendor quotes'},{w:'Week 1–2',t:'Finalise room allocation'},{w:'Week 1–2',t:'Design lighting plan by room'},{w:'Week 1–2',t:'Plan dog-friendly zone near garden door'},{w:'Week 1–2',t:'Confirm grab bars for mum — bedside and bathroom'},{w:'Week 2',t:'Order Castlery Sloane dining table'},{w:'Week 2',t:'Order IKEA RÅDMANSÖ sideboard'},{w:'Week 2',t:'Source and order Philips Hue Perifo track lighting'},{w:'Week 2',t:'Shop dining chairs — match wood tone to table'},{w:'Week 2',t:'Book EMA-licensed electrician'},{w:'Week 2',t:'Confirm pest control treatment booking'},{w:'Week 2–3',t:'Pest control treatment completed'},{w:'Week 2–3',t:'First gardening session done'},{w:'Week 2–3',t:'Set up recurring garden schedule'},{w:'Week 2–3',t:'Electrician installs fixtures and dimmers'},{w:'Week 3',t:'Furniture ordered / delivery scheduled'},{w:'Week 3–4',t:'Furniture in place'},{w:'Week 3–4',t:'Decor and soft furnishings arranged'},{w:'Week 4',t:'Dog area set up, garden fencing checked'},{w:'Week 4',t:'Snagging walkthrough done'}];
 let checkDone=new Set(JSON.parse(localStorage.getItem('hpt_done')||'[]'));
-function renderChecklist(){
-  const el=document.getElementById('checklist-container');
-  let html='',lastW='';
-  checkTasks.forEach((t,i)=>{
-    if(t.w!==lastW){html+=`<div class="slabel">${t.w}</div>`;lastW=t.w;}
-    const done=checkDone.has(i);
-    html+=`<div class="check-item${done?' done':''}" onclick="toggleCheck(${i})"><i class="ti ${done?'ti-circle-check':'ti-circle'}" style="font-size:18px;color:${done?'var(--teal)':'var(--ink-light)'};flex-shrink:0;"></i><span>${t.t}</span></div>`;
-  });
-  el.innerHTML=html;
-}
-function toggleCheck(i){
-  if(checkDone.has(i))checkDone.delete(i);else checkDone.add(i);
-  try{localStorage.setItem('hpt_done',JSON.stringify([...checkDone]));}catch(e){}
-  renderChecklist();
-}
+function renderChecklist(){const el=document.getElementById('checklist-container');let html='',lastW='';checkTasks.forEach((t,i)=>{if(t.w!==lastW){html+=`<div class="slabel">${t.w}</div>`;lastW=t.w;}const done=checkDone.has(i);html+=`<div class="check-item${done?' done':''}" onclick="toggleCheck(${i})"><i class="ti ${done?'ti-circle-check':'ti-circle'}" style="font-size:18px;color:${done?'var(--teal)':'var(--ink-light)'};flex-shrink:0;"></i><span>${t.t}</span></div>`;});el.innerHTML=html;}
+function toggleCheck(i){if(checkDone.has(i))checkDone.delete(i);else checkDone.add(i);try{localStorage.setItem('hpt_done',JSON.stringify([...checkDone]));}catch(e){}renderChecklist();}
 renderChecklist();
+
+/* ── Budget Tracker ── */
+let bItems=[];try{bItems=JSON.parse(localStorage.getItem('hpt_budget2')||'[]');}catch(e){}
+function bSave(){try{localStorage.setItem('hpt_budget2',JSON.stringify(bItems));}catch(e){}}
+function bFmt(n){return 'S$'+Math.round(n).toLocaleString('en-SG');}
+function bTotal(it){return it.status==='owned'?0:(it.price||0)*(it.qty||1);}
+function bAddItem(){const name=document.getElementById('b-name').value.trim();const price=parseFloat(document.getElementById('b-price').value)||0;const qty=parseInt(document.getElementById('b-qty').value)||1;if(!name){alert('Please enter an item name.');return;}bItems.push({id:Date.now(),name,cat:document.getElementById('b-cat').value,status:document.getElementById('b-status').value,price,qty,ptype:document.getElementById('b-ptype').value,notes:document.getElementById('b-notes').value.trim()});bSave();['b-name','b-price','b-notes'].forEach(id=>document.getElementById(id).value='');document.getElementById('b-qty').value='1';alert('Item added! View in "All items" tab.');}
+function bDeleteItem(id){if(!confirm('Remove this item?'))return;bItems=bItems.filter(i=>i.id!==id);bSave();bRenderAll();bRenderSummary();}
+function bToggleOwned(id){bItems=bItems.map(i=>i.id===id?{...i,status:i.status==='owned'?'buy':'owned'}:i);bSave();bRenderAll();bRenderSummary();}
+function bRenderAll(){const el=document.getElementById('bgt-list');if(!bItems.length){el.innerHTML='<div class="empty-state"><i class="ti ti-inbox"></i>No items yet.</div>';return;}const cats=[...new Set(bItems.map(i=>i.cat))];let html='';cats.forEach(cat=>{const ci=bItems.filter(i=>i.cat===cat);const cs=ci.reduce((s,i)=>s+bTotal(i),0);html+=`<div class="slabel section-hdr"><span style="display:flex;align-items:center;gap:6px;"><span style="width:9px;height:9px;border-radius:50%;background:${CAT_COLORS[cat]||'#888'};display:inline-block;"></span>${CAT_LABELS[cat]||cat}</span><span style="font-size:11px;font-weight:400;">${bFmt(cs)}</span></div>`;ci.forEach(it=>{const tot=bTotal(it);const bc=it.status==='owned'?'b-owned':it.status==='tbd'?'b-tbd':'b-buy';const bt=it.status==='owned'?'owned':it.status==='tbd'?'TBD':'to buy';const pt=it.ptype==='est'?' (est.)':it.ptype==='min'?' (min)':it.ptype==='max'?' (max)':'';html+=`<div class="bitem-row"><div class="bcat-dot" style="background:${CAT_COLORS[it.cat]||'#888'};"></div><div style="flex:1;min-width:0;"><div class="bitem-name${it.status==='owned'?' owned-strike':''}">${it.name}<span class="bbadge ${bc}">${bt}</span></div><div class="bitem-sub">${it.qty>1?'×'+it.qty+' · ':''}${it.notes||''}${pt}</div></div><div class="bitem-price ${it.status==='owned'?'owned-price':''}">${it.status==='owned'?'owned':bFmt(tot)}</div><button class="btn-sm${it.status==='owned'?' owned':''}" onclick="bToggleOwned(${it.id})">${it.status==='owned'?'✓ owned':'own it'}</button><button class="btn btn-danger" style="font-size:12px;padding:4px 10px;" onclick="bDeleteItem(${it.id})"><i class="ti ti-trash"></i></button></div>`;});});el.innerHTML=html;}
+function bRenderSummary(){const el=document.getElementById('bgt-summary-content');if(!bItems.length){el.innerHTML='<div class="empty-state"><i class="ti ti-chart-bar"></i>Add items to see your summary.</div>';return;}const totalSpend=bItems.reduce((s,i)=>s+bTotal(i),0);const ownedVal=bItems.filter(i=>i.status==='owned').reduce((s,i)=>s+(i.price||0)*(i.qty||1),0);const remaining=BUDGET-totalSpend;const pct=Math.min(100,Math.round(totalSpend/BUDGET*100));const barColor=pct>90?'#E24B4A':pct>70?'#EF9F27':'#1D9E75';let html=`<div class="metric-grid"><div class="metric"><div class="metric-label">Total budget</div><div class="metric-value">${bFmt(BUDGET)}</div></div><div class="metric"><div class="metric-label">To spend</div><div class="metric-value">${bFmt(totalSpend)}</div></div><div class="metric"><div class="metric-label">Remaining</div><div class="metric-value" style="color:${remaining<0?'#E24B4A':'#1D9E75'};">${bFmt(Math.abs(remaining))}${remaining<0?' over':''}</div></div><div class="metric"><div class="metric-label">Already owned</div><div class="metric-value" style="font-size:16px;color:#1D9E75;">${bFmt(ownedVal)} saved</div></div></div><div class="bar-wrap"><div class="bar-bg"><div class="bar-fill" style="width:${pct}%;background:${barColor};"></div></div><div class="bar-labels"><span>${pct}% of budget allocated</span><span>${bFmt(totalSpend)} of ${bFmt(BUDGET)}</span></div></div><div class="slabel">By category</div>`;const cats=[...new Set(bItems.map(i=>i.cat))];cats.forEach(cat=>{const cs=bItems.filter(i=>i.cat===cat).reduce((s,i)=>s+bTotal(i),0);const cp=totalSpend>0?Math.min(100,Math.round(cs/BUDGET*100)):0;html+=`<div class="cat-bar-row"><span class="cat-bar-label"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${CAT_COLORS[cat]||'#888'};margin-right:5px;vertical-align:middle;"></span>${CAT_LABELS[cat]||cat}</span><div class="cat-bar-bg"><div class="cat-bar-fill" style="width:${cp*2.5}%;background:${CAT_COLORS[cat]||'#888'};"></div></div><span class="cat-bar-amt">${bFmt(cs)}</span></div>`;});const tbd=bItems.filter(i=>i.status==='tbd').reduce((s,i)=>s+bTotal(i),0);if(tbd>0)html+=`<div class="gtip"><strong>${bFmt(tbd)}</strong> in TBD items — confirm prices to get a more accurate total.</div>`;if(remaining>5000)html+=`<div class="gtip" style="border-left-color:var(--blue);">You have <strong>${bFmt(remaining)}</strong> of headroom remaining.</div>`;if(remaining<0)html+=`<div class="gtip" style="border-left-color:var(--red);">You're <strong>${bFmt(Math.abs(remaining))}</strong> over budget — review TBD items or find alternatives.</div>`;el.innerHTML=html;}
+function bLoadDefaults(){if(bItems.length&&!confirm('Add confirmed items on top of existing ones?'))return;const d=[{name:'Castlery Sloane dining table 1.8m',cat:'dining',status:'buy',price:1199,qty:1,ptype:'est',notes:'castlery.com/sg — confirm exact price'},{name:'IKEA RÅDMANSÖ 6-drawer chest (sideboard)',cat:'dining',status:'buy',price:359,qty:1,ptype:'exact',notes:'ikea.com/sg'},{name:'48-bottle wine fridge',cat:'dining',status:'owned',price:750,qty:1,ptype:'est',notes:'Already owned — no cost'},{name:'Philips Hue Perifo track lighting',cat:'lighting',status:'tbd',price:750,qty:1,ptype:'est',notes:'TANGS / Lazada — confirm price'},{name:'Dining chairs — upholstered linen, oak legs',cat:'dining',status:'tbd',price:250,qty:8,ptype:'est',notes:'~S$150–350 each · Castlery / IKEA BERGMUND'},{name:'Pest control treatment',cat:'services',status:'tbd',price:280,qty:1,ptype:'est',notes:'Full terrace — get 3 quotes'},{name:'Gardening — first 3 months',cat:'services',status:'tbd',price:300,qty:1,ptype:'est',notes:'~S$90–150/visit fortnightly'},{name:'Electrician — lighting install + dimmers',cat:'services',status:'tbd',price:1000,qty:1,ptype:'est',notes:'EMA-licensed — get 3 quotes'}];d.forEach(it=>{bItems.push({...it,id:Date.now()+Math.random()*9999|0});});bSave();alert('Confirmed items loaded! Head to "All items" to see them.');}
+bRenderAll();
 
 /* ── Vendor Quotes ── */
 let quotes=JSON.parse(localStorage.getItem('hpt_quotes')||'[]');
-const catLabels={pest:'Pest control',garden:'Gardening',lighting:'Lighting',electrician:'Electrician',furniture:'Furniture',other:'Other'};
-const catClass={pest:'cat-pest',garden:'cat-garden',lighting:'cat-lighting',electrician:'cat-electrician',furniture:'cat-furniture',other:'cat-other'};
+const qCatLabels={pest:'Pest control',garden:'Gardening',lighting:'Lighting',electrician:'Electrician',furniture:'Furniture',other:'Other'};
+const qCatClass={pest:'cat-pest',garden:'cat-garden',lighting:'cat-lighting',electrician:'cat-electrician',furniture:'cat-furniture',other:'cat-other'};
 function saveQ(){try{localStorage.setItem('hpt_quotes',JSON.stringify(quotes));}catch(e){}}
-function fmt(n){return 'S$'+Number(n).toLocaleString('en-SG',{minimumFractionDigits:2,maximumFractionDigits:2});}
-function addQuote(){
-  const vendor=document.getElementById('f-vendor').value.trim();
-  const price=parseFloat(document.getElementById('f-price').value);
-  if(!vendor){alert('Please enter a vendor name.');return;}
-  if(isNaN(price)||price<0){alert('Please enter a valid price.');return;}
-  quotes.push({id:Date.now(),cat:document.getElementById('f-cat').value,vendor,contact:document.getElementById('f-contact').value.trim(),price,type:document.getElementById('f-type').value,valid:document.getElementById('f-valid').value,scope:document.getElementById('f-scope').value.trim(),notes:document.getElementById('f-notes').value.trim(),status:'pending'});
-  saveQ();
-  ['f-vendor','f-contact','f-price','f-scope','f-notes','f-valid'].forEach(id=>document.getElementById(id).value='');
-  alert('Quote added! Check "All quotes" or "Compare" tab.');
-}
+function fmtQ(n){return 'S$'+Number(n).toLocaleString('en-SG',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function addQuote(){const vendor=document.getElementById('f-vendor').value.trim();const price=parseFloat(document.getElementById('f-price').value);if(!vendor){alert('Please enter a vendor name.');return;}if(isNaN(price)||price<0){alert('Please enter a valid price.');return;}quotes.push({id:Date.now(),cat:document.getElementById('f-cat').value,vendor,contact:document.getElementById('f-contact').value.trim(),price,type:document.getElementById('f-type').value,valid:document.getElementById('f-valid').value,scope:document.getElementById('f-scope').value.trim(),notes:document.getElementById('f-notes').value.trim(),status:'pending'});saveQ();['f-vendor','f-contact','f-price','f-scope','f-notes','f-valid'].forEach(id=>document.getElementById(id).value='');alert('Quote added!');}
 function setStatus(id,status){quotes=quotes.map(q=>q.id===id?{...q,status}:q);saveQ();renderAll();}
-function deleteQuote(id){if(!confirm('Delete this quote?'))return;quotes=quotes.filter(q=>q.id!==id);saveQ();renderAll();renderCompare();renderSummary();}
-function renderAll(){
-  const el=document.getElementById('all-list');
-  if(!quotes.length){el.innerHTML='<div class="empty-state"><i class="ti ti-inbox"></i>No quotes yet.</div>';return;}
-  const sorted=[...quotes].sort((a,b)=>a.cat.localeCompare(b.cat)||a.price-b.price);
-  let html='',lastCat='';
-  sorted.forEach(q=>{
-    if(q.cat!==lastCat){html+=`<div class="slabel">${catLabels[q.cat]}</div>`;lastCat=q.cat;}
-    const sb=q.status==='chosen'?'<span class="badge-chosen"><i class="ti ti-check"></i> Chosen</span>':'';
-    html+=`<div class="card-sm"><div class="quote-header"><span class="quote-cat ${catClass[q.cat]}">${catLabels[q.cat]}</span><span class="quote-vendor">${q.vendor}${q.contact?` <span style="font-weight:400;font-size:13px;color:var(--ink-light);">· ${q.contact}</span>`:''}</span>${sb}<span class="quote-price">${fmt(q.price)}</span></div><div class="quote-meta"><i class="ti ti-repeat" style="font-size:14px;vertical-align:-2px;margin-right:4px;"></i>${q.type}${q.valid?' · Valid until '+q.valid:''}</div>${q.scope?`<div class="quote-meta" style="margin-top:3px;">${q.scope}</div>`:''}${q.notes?`<div class="quote-meta" style="margin-top:3px;font-style:italic;">${q.notes}</div>`:''}<div class="btn-row"><button class="btn-sm${q.status==='chosen'?' chosen':''}" onclick="setStatus(${q.id},'chosen')"><i class="ti ti-check"></i> Choose</button><button class="btn-sm" onclick="setStatus(${q.id},'pending')">Reset</button><button class="btn btn-danger" style="font-size:12px;padding:4px 10px;" onclick="deleteQuote(${q.id})"><i class="ti ti-trash"></i></button></div></div>`;
-  });
-  el.innerHTML=html;
-}
-function renderCompare(){
-  const el=document.getElementById('compare-list');
-  const cats=[...new Set(quotes.map(q=>q.cat))];
-  const grouped=cats.map(cat=>({cat,items:quotes.filter(q=>q.cat===cat).sort((a,b)=>a.price-b.price)})).filter(g=>g.items.length>=2);
-  if(!grouped.length){el.innerHTML='<div class="empty-state"><i class="ti ti-scale"></i>Add at least 2 quotes in the same category to compare.</div>';return;}
-  let html='';
-  grouped.forEach(g=>{
-    const minP=Math.min(...g.items.map(q=>q.price));
-    const cols=Math.min(g.items.length,3);
-    html+=`<div class="compare-group"><div class="compare-title">${catLabels[g.cat]} — ${g.items.length} quotes</div><div class="compare-grid" style="grid-template-columns:repeat(${cols},1fr);">`;
-    g.items.forEach(q=>{
-      const win=q.price===minP;
-      html+=`<div class="compare-cell${win?' winner':''}">${win?'<div style="font-size:11px;color:var(--teal);font-weight:500;margin-bottom:4px;"><i class="ti ti-trophy"></i> Lowest price</div>':''}<div class="compare-vendor">${q.vendor}</div><div class="compare-price">${fmt(q.price)}</div><div class="compare-note">${q.type}</div>${q.scope?`<div class="compare-note" style="margin-top:4px;">${q.scope.substring(0,80)}${q.scope.length>80?'...':''}</div>`:''}${q.status==='chosen'?'<div style="margin-top:6px;font-size:11px;color:var(--teal);font-weight:500;"><i class="ti ti-check"></i> Chosen</div>':''}</div>`;
-    });
-    html+=`</div></div>`;
-  });
-  el.innerHTML=html;
-}
-function renderSummary(){
-  const el=document.getElementById('summary-content');
-  if(!quotes.length){el.innerHTML='<div class="empty-state"><i class="ti ti-chart-bar"></i>Add quotes to see summary.</div>';return;}
-  const chosen=quotes.filter(q=>q.status==='chosen');
-  const total=chosen.reduce((s,q)=>s+q.price,0);
-  const pending=quotes.filter(q=>q.status==='pending').length;
-  let html=`<div class="metric-grid"><div class="metric"><div class="metric-label">Total quotes</div><div class="metric-value">${quotes.length}</div></div><div class="metric"><div class="metric-label">Categories</div><div class="metric-value">${new Set(quotes.map(q=>q.cat)).size}</div></div><div class="metric"><div class="metric-label">Chosen vendors</div><div class="metric-value">${chosen.length}</div></div><div class="metric"><div class="metric-label">Committed spend</div><div class="metric-value" style="font-size:16px;">${fmt(total)}</div></div></div>`;
-  if(chosen.length){
-    html+='<div class="slabel">Chosen vendors</div>';
-    chosen.forEach(q=>{html+=`<div class="card-sm" style="border-color:var(--teal-mid);"><div class="quote-header"><span class="quote-cat ${catClass[q.cat]}">${catLabels[q.cat]}</span><span class="quote-vendor">${q.vendor}</span><span class="badge-chosen"><i class="ti ti-check"></i> Chosen</span><span class="quote-price">${fmt(q.price)}</span></div><div class="quote-meta">${q.type}${q.contact?' · '+q.contact:''}</div></div>`;});
-  }
-  if(pending>0)html+=`<div class="tip-box" style="margin-top:1rem;"><i class="ti ti-alert-triangle"></i> ${pending} quote${pending>1?'s':''} still pending. Head to "All quotes" to decide.</div>`;
-  el.innerHTML=html;
-}
-function loadSample(){
-  quotes=[
-    {id:1,cat:'pest',vendor:'Rentokil',contact:'James Tan',price:280,type:'one-time',valid:'2026-06-15',scope:'Termites, cockroaches, ants. Full terrace incl. garden perimeter. 3-month warranty.',notes:'NEA licensed.',status:'pending'},
-    {id:2,cat:'pest',vendor:'Killem Pest',contact:'',price:195,type:'one-time',valid:'2026-06-10',scope:'Cockroaches and ants only. Indoor treatment.',notes:'Does not cover termites or garden.',status:'pending'},
-    {id:3,cat:'pest',vendor:'Anticimex',contact:'Sarah',price:320,type:'one-time',valid:'2026-06-20',scope:'Full treatment incl. termites, mosquitoes. Digital monitoring device included.',notes:'Premium — digital trap included.',status:'pending'},
-    {id:4,cat:'garden',vendor:'Ah Kow Landscaping',contact:'Mr Kow',price:90,type:'per-visit',valid:'',scope:'Mowing, trimming, leaf clearing. Fortnightly.',notes:'Neighbour recommendation.',status:'pending'},
-    {id:5,cat:'garden',vendor:'GreenThumb SG',contact:'',price:150,type:'per-visit',valid:'2026-06-30',scope:'Full garden maintenance + fertilising.',notes:'Slightly pricier but includes fertilising.',status:'pending'},
-    {id:6,cat:'electrician',vendor:'PowerBright Elec',contact:'Andy',price:850,type:'one-time',valid:'',scope:'Install 8 light points, 2 dimmers, check wiring.',notes:'EMA licensed. Can start next week.',status:'pending'},
-    {id:7,cat:'electrician',vendor:'JL Electrical',contact:'',price:1100,type:'one-time',valid:'',scope:'8 light points, dimmers, full rewiring check + safety cert.',notes:'Includes safety certificate.',status:'pending'},
-  ];
-  saveQ();renderAll();
-  alert('Sample data loaded! Check "All quotes" and "Compare" tabs.');
-}
+function deleteQuote(id){if(!confirm('Delete this quote?'))return;quotes=quotes.filter(q=>q.id!==id);saveQ();renderAll();renderCompare();renderVSummary();}
+function renderAll(){const el=document.getElementById('all-list');if(!quotes.length){el.innerHTML='<div class="empty-state"><i class="ti ti-inbox"></i>No quotes yet.</div>';return;}const sorted=[...quotes].sort((a,b)=>a.cat.localeCompare(b.cat)||a.price-b.price);let html='',lastCat='';sorted.forEach(q=>{if(q.cat!==lastCat){html+=`<div class="slabel">${qCatLabels[q.cat]}</div>`;lastCat=q.cat;}const sb=q.status==='chosen'?'<span class="badge-chosen"><i class="ti ti-check"></i> Chosen</span>':'';html+=`<div class="card-sm"><div class="quote-header"><span class="quote-cat ${qCatClass[q.cat]}">${qCatLabels[q.cat]}</span><span class="quote-vendor">${q.vendor}${q.contact?` <span style="font-weight:400;font-size:13px;color:var(--ink-light);">· ${q.contact}</span>`:''}</span>${sb}<span class="quote-price">${fmtQ(q.price)}</span></div><div class="quote-meta"><i class="ti ti-repeat" style="font-size:14px;vertical-align:-2px;margin-right:4px;"></i>${q.type}${q.valid?' · Valid until '+q.valid:''}</div>${q.scope?`<div class="quote-meta" style="margin-top:3px;">${q.scope}</div>`:''}${q.notes?`<div class="quote-meta" style="margin-top:3px;font-style:italic;">${q.notes}</div>`:''}<div class="btn-row"><button class="btn-sm${q.status==='chosen'?' chosen':''}" onclick="setStatus(${q.id},'chosen')"><i class="ti ti-check"></i> Choose</button><button class="btn-sm" onclick="setStatus(${q.id},'pending')">Reset</button><button class="btn btn-danger" style="font-size:12px;padding:4px 10px;" onclick="deleteQuote(${q.id})"><i class="ti ti-trash"></i></button></div></div>`;});el.innerHTML=html;}
+function renderCompare(){const el=document.getElementById('compare-list');const cats=[...new Set(quotes.map(q=>q.cat))];const grouped=cats.map(cat=>({cat,items:quotes.filter(q=>q.cat===cat).sort((a,b)=>a.price-b.price)})).filter(g=>g.items.length>=2);if(!grouped.length){el.innerHTML='<div class="empty-state"><i class="ti ti-scale"></i>Add at least 2 quotes in the same category to compare.</div>';return;}let html='';grouped.forEach(g=>{const minP=Math.min(...g.items.map(q=>q.price));const cols=Math.min(g.items.length,3);html+=`<div class="compare-group"><div class="compare-title">${qCatLabels[g.cat]} — ${g.items.length} quotes</div><div class="compare-grid" style="grid-template-columns:repeat(${cols},1fr);">`;g.items.forEach(q=>{const win=q.price===minP;html+=`<div class="compare-cell${win?' winner':''}">${win?'<div style="font-size:11px;color:var(--teal);font-weight:500;margin-bottom:4px;"><i class="ti ti-trophy"></i> Lowest price</div>':''}<div class="compare-vendor">${q.vendor}</div><div class="compare-price">${fmtQ(q.price)}</div><div class="compare-note">${q.type}</div>${q.scope?`<div class="compare-note" style="margin-top:4px;">${q.scope.substring(0,80)}${q.scope.length>80?'...':''}</div>`:''}${q.status==='chosen'?'<div style="margin-top:6px;font-size:11px;color:var(--teal);font-weight:500;"><i class="ti ti-check"></i> Chosen</div>':''}</div>`;});html+=`</div></div>`;});el.innerHTML=html;}
+function renderVSummary(){const el=document.getElementById('summary-content');if(!quotes.length){el.innerHTML='<div class="empty-state"><i class="ti ti-chart-bar"></i>Add quotes to see summary.</div>';return;}const chosen=quotes.filter(q=>q.status==='chosen');const total=chosen.reduce((s,q)=>s+q.price,0);const pending=quotes.filter(q=>q.status==='pending').length;let html=`<div class="metric-grid"><div class="metric"><div class="metric-label">Total quotes</div><div class="metric-value">${quotes.length}</div></div><div class="metric"><div class="metric-label">Categories</div><div class="metric-value">${new Set(quotes.map(q=>q.cat)).size}</div></div><div class="metric"><div class="metric-label">Chosen vendors</div><div class="metric-value">${chosen.length}</div></div><div class="metric"><div class="metric-label">Committed spend</div><div class="metric-value" style="font-size:16px;">${fmtQ(total)}</div></div></div>`;if(chosen.length){html+='<div class="slabel">Chosen vendors</div>';chosen.forEach(q=>{html+=`<div class="card-sm" style="border-color:var(--teal-mid);"><div class="quote-header"><span class="quote-cat ${qCatClass[q.cat]}">${qCatLabels[q.cat]}</span><span class="quote-vendor">${q.vendor}</span><span class="badge-chosen"><i class="ti ti-check"></i> Chosen</span><span class="quote-price">${fmtQ(q.price)}</span></div><div class="quote-meta">${q.type}${q.contact?' · '+q.contact:''}</div></div>`;});}if(pending>0)html+=`<div class="gtip"><i class="ti ti-alert-triangle"></i> ${pending} quote${pending>1?'s':''} still pending. Head to "All quotes" to decide.</div>`;el.innerHTML=html;}
+function loadSample(){quotes=[{id:1,cat:'pest',vendor:'Rentokil',contact:'James Tan',price:280,type:'one-time',valid:'2026-06-15',scope:'Termites, cockroaches, ants. Full terrace incl. garden perimeter. 3-month warranty.',notes:'NEA licensed.',status:'pending'},{id:2,cat:'pest',vendor:'Killem Pest',contact:'',price:195,type:'one-time',valid:'2026-06-10',scope:'Cockroaches and ants only. Indoor treatment.',notes:'Does not cover termites or garden.',status:'pending'},{id:3,cat:'pest',vendor:'Anticimex',contact:'Sarah',price:320,type:'one-time',valid:'2026-06-20',scope:'Full treatment incl. termites, mosquitoes. Digital monitoring device included.',notes:'Premium option.',status:'pending'},{id:4,cat:'garden',vendor:'Ah Kow Landscaping',contact:'Mr Kow',price:90,type:'per-visit',valid:'',scope:'Mowing, trimming, leaf clearing.',notes:'Neighbour recommendation.',status:'pending'},{id:5,cat:'garden',vendor:'GreenThumb SG',contact:'',price:150,type:'per-visit',valid:'2026-06-30',scope:'Full garden maintenance + fertilising.',notes:'Includes fertilising.',status:'pending'},{id:6,cat:'electrician',vendor:'PowerBright Elec',contact:'Andy',price:850,type:'one-time',valid:'',scope:'Install 8 light points, 2 dimmers, check wiring.',notes:'EMA licensed.',status:'pending'},{id:7,cat:'electrician',vendor:'JL Electrical',contact:'',price:1100,type:'one-time',valid:'',scope:'8 light points, dimmers, full rewiring check + safety cert.',notes:'Includes safety certificate.',status:'pending'}];saveQ();renderAll();alert('Sample data loaded!');}
 </script>
 </body>
 </html>
