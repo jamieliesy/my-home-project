@@ -302,7 +302,7 @@ footer{text-align:center;padding:2rem;font-size:12px;color:var(--ink-light);bord
 <footer>1 Jalan Gajus Home Project &copy; 2026 &middot; Built with Claude</footer>
 
 <script>
-const BUDGET=30000;
+const BUDGET=35000;
 const CAT_LABELS={dining:'Dining area',living:'Living area',master:'Master bedroom',mum:"Mum's bedroom",helper:"Helper's room",lighting:'Lighting',kitchen:'Kitchen appliances',decor:'Decor & soft furnishings',services:'Vendor services',other:'Other'};
 const CAT_COLORS={dining:'#7A5330',living:'#378ADD',master:'#7F77DD',mum:'#D4537E',helper:'#3A7048',lighting:'#C47C2B',kitchen:'#5B8FA8',decor:'#5DCAA5',services:'#B04535',other:'#888780'};
 
@@ -321,33 +321,45 @@ const checkTasks=[
 {w:'Week 1',t:'Walk the garden — assess condition'},
 {w:'Week 1',t:'Get 3 pest control quotes'},
 {w:'Week 1',t:'Get 3 gardening vendor quotes'},
-{w:'Week 1',t:'Sign up to philips-hue.com/en-sg for 15% welcome discount'},
+
 {w:'Week 1–2',t:'Finalise room allocation'},
 {w:'Week 1–2',t:'Design lighting plan by room'},
 {w:'Week 1–2',t:'Plan dog-friendly zone near garden door'},
 {w:'Week 1–2',t:'Confirm grab bars for mum — bedside and bathroom'},
-{w:'Week 2',t:'Order Castlery Sloane dining table 1.8m'},
-{w:'Week 2',t:'Order Rinnai RH-S95A + RB-983S bundle from Shopee'},
-{w:'Week 2',t:'Order Rinnai RO-E6513M-ES oven from Shopee'},
-{w:'Week 2',t:'Register Rinnai warranty at rinnai.sg after delivery'},
+{w:'Week 2',t:'Castlery Sloane dining table 2.25m — procured ✓'},
+{w:'Week 2',t:'Castlery Sloane sideboard 150cm — procured ✓'},
+{w:'Week 2',t:'Castlery Anya chairs x6 + cushions — procured ✓'},
+{w:'Week 2',t:'Castlery Zeke area rug Corn — procured ✓'},
+
+
+
 {w:'Week 2',t:'Order IKEA RÅDMANSÖ 6-drawer chest (sideboard)'},
-{w:'Week 2',t:'Order Perifo 4-spot starter kit (use Hue 15% discount)'},
-{w:'Week 2',t:'Order Perifo 5 add-on spotlights + 3 rail extensions'},
-{w:'Week 2',t:'Order Hue Bridge + Dimmer Switch'},
+
+
+
 {w:'Week 2',t:'Book EMA-licensed electrician — incl. ceiling point for Perifo PSU'},
-{w:'Week 2',t:'Shop dining chairs — match wood tone to table in person'},
+
 {w:'Week 2',t:'Confirm pest control treatment booking'},
 {w:'Week 2–3',t:'Pest control treatment completed'},
 {w:'Week 2–3',t:'First gardening session done'},
 {w:'Week 2–3',t:'Set up recurring garden schedule'},
-{w:'Week 2–3',t:'Electrician installs Perifo ceiling point + other fixtures'},
+{w:'Week 2–3',t:'Contractor — install track lights (9 points)'},
+{w:'Week 2–3',t:'Contractor — install Mayer hob (MMSS633) + hood (MMSL901SM)'},
+{w:'Week 2–3',t:'Contractor — install Mayer built-in oven (MMD013C)'},
+{w:'Week 2–3',t:'Contractor — install 4x Samaire ceiling fans'},
+{w:'Week 2–3',t:'Contractor — install kitchen tap and connect sink'},
+{w:'Week 2–3',t:'Contractor — modify cabinet for built-in oven + condiment basket'},
+{w:'Week 2–3',t:'Contractor — run 13A point for wireless CCTV at gate'},
+{w:'Week 2–3',t:'Contractor — run stainless steel cold water pipe (2 outdoor points)'},
+{w:'Week 2',t:'Order Castlery Sloane TV console 150cm — check storewide sale'},
+{w:'Week 2',t:'Order Sony Bravia X85L 75" — confirm price at Sony Store SG or Courts'},
 {w:'Week 3',t:'Furniture ordered / delivery scheduled'},
 {w:'Week 3–4',t:'Furniture in place'},
-{w:'Week 3–4',t:'Install and configure Perifo track lighting'},
-{w:'Week 3–4',t:'Set up Hue Bridge + Dimmer Switch warm scenes'},
+
+
 {w:'Week 3–4',t:'Decor and soft furnishings arranged'},
-{w:'Week 1–2',t:'Get curtain quotes from supplier — living area + both bedrooms'},
-{w:'Week 2',t:'Confirm curtain order — sheer (living) + blackout (master + mum)'},
+
+{w:'Week 2',t:'Confirm curtain order — quote received at S$4,200 for full house'},
 {w:'Week 3–4',t:'Confirm bamboo blinds installation appointment'},
 {w:'Week 3–4',t:'Curtains installed — living area and bedrooms'},
 {w:'Week 4',t:'Dog area set up, garden fencing checked'},
@@ -369,28 +381,48 @@ function bToggleOwned(id){bItems=bItems.map(i=>i.id===id?{...i,status:i.status==
 function bRenderAll(){const el=document.getElementById('bgt-list');if(!bItems.length){el.innerHTML='<div class="empty-state"><i class="ti ti-inbox"></i>No items yet.</div>';return;}const cats=[...new Set(bItems.map(i=>i.cat))];let html='';cats.forEach(cat=>{const ci=bItems.filter(i=>i.cat===cat);const cs=ci.reduce((s,i)=>s+bTotal(i),0);html+=`<div class="slabel section-hdr"><span style="display:flex;align-items:center;gap:6px;"><span style="width:9px;height:9px;border-radius:50%;background:${CAT_COLORS[cat]||'#888'};display:inline-block;"></span>${CAT_LABELS[cat]||cat}</span><span style="font-size:11px;font-weight:400;">${bFmt(cs)}</span></div>`;ci.forEach(it=>{const tot=bTotal(it);const bc=it.status==='owned'?'b-owned':it.status==='tbd'?'b-tbd':'b-buy';const bt=it.status==='owned'?'owned':it.status==='tbd'?'TBD':'to buy';const pt=it.ptype==='est'?' (est.)':it.ptype==='min'?' (min)':it.ptype==='max'?' (max)':'';html+=`<div class="bitem-row"><div class="bcat-dot" style="background:${CAT_COLORS[it.cat]||'#888'};"></div><div style="flex:1;min-width:0;"><div class="bitem-name${it.status==='owned'?' owned-strike':''}">${it.name}<span class="bbadge ${bc}">${bt}</span></div><div class="bitem-sub">${it.qty>1?'×'+it.qty+' · ':''}${it.notes||''}${pt}</div></div><div class="bitem-price ${it.status==='owned'?'owned-price':''}">${it.status==='owned'?'owned':bFmt(tot)}</div><button class="btn-sm${it.status==='owned'?' owned':''}" onclick="bToggleOwned(${it.id})">${it.status==='owned'?'✓ owned':'own it'}</button><button class="btn btn-danger" style="font-size:12px;padding:4px 10px;" onclick="bDeleteItem(${it.id})"><i class="ti ti-trash"></i></button></div>`;});});el.innerHTML=html;}
 function bRenderSummary(){const el=document.getElementById('bgt-summary-content');if(!bItems.length){el.innerHTML='<div class="empty-state"><i class="ti ti-chart-bar"></i>Add items to see your summary.</div>';return;}const totalSpend=bItems.reduce((s,i)=>s+bTotal(i),0);const ownedVal=bItems.filter(i=>i.status==='owned').reduce((s,i)=>s+(i.price||0)*(i.qty||1),0);const remaining=BUDGET-totalSpend;const pct=Math.min(100,Math.round(totalSpend/BUDGET*100));const barColor=pct>90?'#E24B4A':pct>70?'#EF9F27':'#1D9E75';let html=`<div class="metric-grid"><div class="metric"><div class="metric-label">Total budget</div><div class="metric-value">${bFmt(BUDGET)}</div></div><div class="metric"><div class="metric-label">To spend</div><div class="metric-value">${bFmt(totalSpend)}</div></div><div class="metric"><div class="metric-label">Remaining</div><div class="metric-value" style="color:${remaining<0?'#E24B4A':'#1D9E75'};">${bFmt(Math.abs(remaining))}${remaining<0?' over':''}</div></div><div class="metric"><div class="metric-label">Already owned</div><div class="metric-value" style="font-size:16px;color:#1D9E75;">${bFmt(ownedVal)} saved</div></div></div><div class="bar-wrap"><div class="bar-bg"><div class="bar-fill" style="width:${pct}%;background:${barColor};"></div></div><div class="bar-labels"><span>${pct}% of budget allocated</span><span>${bFmt(totalSpend)} of ${bFmt(BUDGET)}</span></div></div><div class="slabel">By category</div>`;const cats=[...new Set(bItems.map(i=>i.cat))];cats.forEach(cat=>{const cs=bItems.filter(i=>i.cat===cat).reduce((s,i)=>s+bTotal(i),0);const cp=totalSpend>0?Math.min(100,Math.round(cs/BUDGET*100)):0;html+=`<div class="cat-bar-row"><span class="cat-bar-label"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${CAT_COLORS[cat]||'#888'};margin-right:5px;vertical-align:middle;"></span>${CAT_LABELS[cat]||cat}</span><div class="cat-bar-bg"><div class="cat-bar-fill" style="width:${cp*2.5}%;background:${CAT_COLORS[cat]||'#888'};"></div></div><span class="cat-bar-amt">${bFmt(cs)}</span></div>`;});const tbd=bItems.filter(i=>i.status==='tbd').reduce((s,i)=>s+bTotal(i),0);if(tbd>0)html+=`<div class="gtip"><strong>${bFmt(tbd)}</strong> in TBD items — confirm prices to get a more accurate total.</div>`;if(remaining>5000)html+=`<div class="gtip" style="border-left-color:var(--blue);">You have <strong>${bFmt(remaining)}</strong> of headroom remaining.</div>`;if(remaining<0)html+=`<div class="gtip" style="border-left-color:var(--red);">You're <strong>${bFmt(Math.abs(remaining))}</strong> over budget — review TBD items or find alternatives.</div>`;el.innerHTML=html;}
 function bLoadDefaults(){if(bItems.length&&!confirm('Add confirmed items on top of existing ones?'))return;const d=[
-{name:'Castlery Sloane dining table 1.8m',cat:'dining',status:'buy',price:1199,qty:1,ptype:'est',notes:'castlery.com/sg — confirm exact price'},
-{name:'IKEA RÅDMANSÖ 6-drawer chest (sideboard)',cat:'dining',status:'buy',price:359,qty:1,ptype:'exact',notes:'ikea.com/sg'},
+{name:'Castlery Sloane dining table 2.25m',cat:'dining',status:'buy',price:1006.84,qty:1,ptype:'exact',notes:'castlery.com/sg — procured · incl. 9% GST (S$83.13)'},
+{name:'Castlery Sloane sideboard 150cm',cat:'dining',status:'buy',price:1148.23,qty:1,ptype:'exact',notes:'castlery.com/sg — procured · incl. 9% GST (S$94.81)'},
 {name:'48-bottle wine fridge',cat:'dining',status:'owned',price:750,qty:1,ptype:'est',notes:'Already owned — no cost'},
-{name:'Dining chairs — upholstered linen, oak legs',cat:'dining',status:'tbd',price:250,qty:8,ptype:'est',notes:'~S$150–350 each · Castlery / IKEA BERGMUND — buy after table arrives'},
+{name:'Castlery Anya dining chairs x6',cat:'dining',status:'buy',price:1506.48,qty:1,ptype:'exact',notes:'castlery.com/sg — 6 chairs, procured · incl. 9% GST (S$124.39)'},
+{name:'Castlery Anya chair cushions (Moss)',cat:'dining',status:'buy',price:201.54,qty:1,ptype:'exact',notes:'castlery.com/sg — Performance Twill, moss colour, procured · incl. 9% GST (S$16.64)'},
+{name:'Castlery Zeke area rug — Corn 229x274cm',cat:'decor',status:'buy',price:706.25,qty:1,ptype:'exact',notes:'castlery.com/sg — procured · incl. 9% GST (S$58.31)'},
 {name:'Perifo 4-spot starter kit',cat:'lighting',status:'buy',price:350,qty:1,ptype:'est',notes:'philips-hue.com/en-sg — use 15% welcome discount on signup'},
-{name:'Perifo cylinder spotlight White Ambiance (add-on)',cat:'lighting',status:'buy',price:90,qty:5,ptype:'est',notes:'Shopee Philips Official Store — buy during 9.9 / 11.11 sale'},
-{name:'Perifo 100cm rail extension',cat:'lighting',status:'buy',price:48,qty:3,ptype:'est',notes:'Extends track to ~4.3m total for dining + living zone'},
-{name:'Hue Bridge',cat:'lighting',status:'buy',price:90,qty:1,ptype:'est',notes:'philips-hue.com/en-sg or TANGS'},
-{name:'Hue Dimmer Switch',cat:'lighting',status:'buy',price:50,qty:1,ptype:'est',notes:'Wall-mount · one-press warm scenes · no app needed day-to-day'},
-{name:'Electrician — ceiling power point for Perifo PSU',cat:'services',status:'tbd',price:90,qty:1,ptype:'est',notes:'Hardwired ceiling point for Perifo — EMA-licensed electrician'},
-{name:'Pest control treatment',cat:'services',status:'tbd',price:280,qty:1,ptype:'est',notes:'Full terrace incl. garden perimeter — get 3 quotes'},
+
+
+
+
+{name:'Contractor — 13A point for wireless CCTV at gate',cat:'services',status:'buy',price:120,qty:1,ptype:'exact',notes:'Reno works package · GST absorbed'},
+{name:'Contractor — Labour to install track lights (9 points)',cat:'services',status:'buy',price:180,qty:1,ptype:'exact',notes:'9 × S$20 · Reno works package · GST absorbed'},
+{name:'Contractor — Modify cabinet for built-in oven + pull-out condiment basket',cat:'kitchen',status:'buy',price:650,qty:1,ptype:'exact',notes:'Reno works package · GST absorbed'},
+{name:'Contractor — Stainless steel cold water pipe (2 outdoor points, est 25-30m)',cat:'services',status:'buy',price:2000,qty:1,ptype:'exact',notes:'Reno works package · GST absorbed'},
+{name:'Contractor — Labour to install cooker hood and hob',cat:'kitchen',status:'buy',price:80,qty:1,ptype:'exact',notes:'Reno works package · GST absorbed'},
+{name:'Contractor — Labour to install kitchen tap and connect sink',cat:'kitchen',status:'buy',price:250,qty:1,ptype:'exact',notes:'Reno works package · GST absorbed'},
+{name:'Contractor reno works — goodwill discount applied',cat:'services',status:'buy',price:-180,qty:1,ptype:'exact',notes:'Original quote S$3,280 less S$180 goodwill discount = S$3,100 final · GST absorbed'},
+{name:'Pest control — annual package',cat:'services',status:'buy',price:2354.40,qty:1,ptype:'exact',notes:'S$2,160 + 9% GST (S$194.40) = S$2,354.40 · annual package · quote received'},
 {name:'Gardening — first 3 months',cat:'services',status:'tbd',price:300,qty:1,ptype:'est',notes:'~S$90–150/visit fortnightly · Helpling / Kaodim'},
-{name:'Electrician — general lighting install + dimmers',cat:'services',status:'tbd',price:900,qty:1,ptype:'est',notes:'EMA-licensed — get 3 quotes · other rooms excl. Perifo point'},
+
 {name:'Rinnai RH-S95A + RB-983S bundle (hood + hob)',cat:'kitchen',status:'buy',price:746.70,qty:1,ptype:'exact',notes:'Shopee — confirm authorised seller · register warranty with Rinnai SG promptly'},
-{name:'Rinnai RO-E6513M-ES built-in oven 77L',cat:'kitchen',status:'buy',price:768,qty:1,ptype:'exact',notes:'Shopee — Made in Europe · 1 year warranty · register with Rinnai SG after delivery'},
-{name:'Kitchen appliances installation (hob + hood + oven)',cat:'kitchen',status:'tbd',price:150,qty:1,ptype:'est',notes:'Allow S$100-200 · check gas connection + hood ducting'},
+
+{name:'Mayer MMSS633 — 60cm 3-burner stainless steel gas hob',cat:'kitchen',status:'buy',price:1448.61,qty:1,ptype:'exact',notes:'Part of Mayer bundle MMSS633+MMSL901SM+MMD013C · incl. 9% GST · contractor products purchase'},
+{name:'Mayer MMSL901SM — 90cm slimline hood (825m3/hr, 3 motors)',cat:'kitchen',status:'buy',price:0,qty:1,ptype:'exact',notes:'Included in Mayer bundle above — price split not itemised separately'},
+{name:'Mayer MMD013C — built-in oven (upgrade)',cat:'kitchen',status:'buy',price:0,qty:1,ptype:'exact',notes:'Included in Mayer bundle above — price split not itemised separately'},
+{name:'52" Samaire ceiling fan (no light) x4',cat:'decor',status:'buy',price:1255.68,qty:1,ptype:'exact',notes:'4 x S$288 = S$1,152 + 9% GST · contractor products purchase'},
+{name:'Ceiling fan installation x4',cat:'services',status:'buy',price:261.60,qty:1,ptype:'exact',notes:'4 x S$60 + 9% GST · contractor products purchase'},
+{name:'Double bowl stainless steel top mount sink with waste',cat:'kitchen',status:'buy',price:499.22,qty:1,ptype:'exact',notes:'S$458 + 9% GST · contractor products purchase'},
+{name:'Basic cold water kitchen tap',cat:'kitchen',status:'buy',price:183.12,qty:1,ptype:'exact',notes:'S$168 + 9% GST · contractor products purchase'},
+{name:'Wireless doorbell',cat:'other',status:'buy',price:0,qty:1,ptype:'exact',notes:'FOC — included free with contractor products'},
+{name:'Window netting (lizards + insects)',cat:'services',status:'buy',price:1780,qty:1,ptype:'exact',notes:'Installed · covers selected windows across house'},
+{name:'Climate voucher offset — ceiling fans',cat:'decor',status:'buy',price:-400,qty:1,ptype:'exact',notes:'S$400 climate vouchers applied against Samaire ceiling fan purchase'},
+{name:'Contractor products — goodwill discount',cat:'kitchen',status:'buy',price:-48.23,qty:1,ptype:'exact',notes:'Original S$3,648.23 less S$48.23 goodwill discount = S$3,600 final'},
 {name:'Bamboo blinds — black & white (JB)',cat:'decor',status:'buy',price:960.75,qty:1,ptype:'exact',notes:'RM2,980 at MYR/SGD 0.3224 · purchased in JB'},
 {name:'Bamboo blinds — installation',cat:'decor',status:'buy',price:270,qty:1,ptype:'exact',notes:'Singapore installer · confirm appointment before move-in date'},
-{name:'Curtains — living area (sheer)',cat:'decor',status:'tbd',price:0,qty:1,ptype:'est',notes:'Supplier TBD · sheer light-filtering · update price once quoted'},
-{name:'Curtains — master bedroom (blackout)',cat:'decor',status:'tbd',price:0,qty:1,ptype:'est',notes:'Supplier TBD · blackout · update price once quoted'},
-{name:'Curtains — mum bedroom (blackout)',cat:'decor',status:'tbd',price:0,qty:1,ptype:'est',notes:'Supplier TBD · blackout · update price once quoted'},
-{name:'Curtains — installation',cat:'decor',status:'tbd',price:0,qty:1,ptype:'est',notes:'Often included by curtain supplier — confirm when quoting'}
+{name:'Curtains — full house (living sheer + master & mum blackout)',cat:'decor',status:'buy',price:4335,qty:1,ptype:'exact',notes:'Quote received · full house · sheer for living + blackout for master & mum · confirm if installation included'},
+{name:'Sofa — King Living Zaza 2.5 seater (light tan)',cat:'living',status:'owned',price:0,qty:1,ptype:'exact',notes:'Existing sofa from current home — no cost'},
+{name:'Coffee table — King Living Crescent 850',cat:'living',status:'owned',price:0,qty:1,ptype:'exact',notes:'Existing coffee table from current home — no cost'},
+{name:'Sony Bravia X85L 75" 4K Full Array LED TV',cat:'living',status:'tbd',price:2069.91,qty:1,ptype:'est',notes:'KD-75X85L · incl. 9% GST est. · 3yr local warranty · buy from Sony Store SG or Courts · confirm exact price before ordering'},
+{name:'Castlery Sloane TV console 150cm',cat:'living',status:'tbd',price:1197.91,qty:1,ptype:'est',notes:'castlery.com/sg · fluted panels, brass accent · incl. 9% GST · check storewide sale discount before ordering'},
+{name:'Beds — from current home (master + mum)',cat:'master',status:'owned',price:0,qty:1,ptype:'exact',notes:'Existing beds brought from current place — no cost'},
 ];d.forEach(it=>{bItems.push({...it,id:Date.now()+Math.random()*9999|0});});bSave();alert('All confirmed items loaded! Head to "All items" to see them.');}
 bRenderAll();
 
@@ -406,7 +438,12 @@ function deleteQuote(id){if(!confirm('Delete this quote?'))return;quotes=quotes.
 function renderAll(){const el=document.getElementById('all-list');if(!quotes.length){el.innerHTML='<div class="empty-state"><i class="ti ti-inbox"></i>No quotes yet.</div>';return;}const sorted=[...quotes].sort((a,b)=>a.cat.localeCompare(b.cat)||a.price-b.price);let html='',lastCat='';sorted.forEach(q=>{if(q.cat!==lastCat){html+=`<div class="slabel">${qCatLabels[q.cat]}</div>`;lastCat=q.cat;}const sb=q.status==='chosen'?'<span class="badge-chosen"><i class="ti ti-check"></i> Chosen</span>':'';html+=`<div class="card-sm"><div class="quote-header"><span class="quote-cat ${qCatClass[q.cat]}">${qCatLabels[q.cat]}</span><span class="quote-vendor">${q.vendor}${q.contact?` <span style="font-weight:400;font-size:13px;color:var(--ink-light);">· ${q.contact}</span>`:''}</span>${sb}<span class="quote-price">${fmtQ(q.price)}</span></div><div class="quote-meta"><i class="ti ti-repeat" style="font-size:14px;vertical-align:-2px;margin-right:4px;"></i>${q.type}${q.valid?' · Valid until '+q.valid:''}</div>${q.scope?`<div class="quote-meta" style="margin-top:3px;">${q.scope}</div>`:''}${q.notes?`<div class="quote-meta" style="margin-top:3px;font-style:italic;">${q.notes}</div>`:''}<div class="btn-row"><button class="btn-sm${q.status==='chosen'?' chosen':''}" onclick="setStatus(${q.id},'chosen')"><i class="ti ti-check"></i> Choose</button><button class="btn-sm" onclick="setStatus(${q.id},'pending')">Reset</button><button class="btn btn-danger" style="font-size:12px;padding:4px 10px;" onclick="deleteQuote(${q.id})"><i class="ti ti-trash"></i></button></div></div>`;});el.innerHTML=html;}
 function renderCompare(){const el=document.getElementById('compare-list');const cats=[...new Set(quotes.map(q=>q.cat))];const grouped=cats.map(cat=>({cat,items:quotes.filter(q=>q.cat===cat).sort((a,b)=>a.price-b.price)})).filter(g=>g.items.length>=2);if(!grouped.length){el.innerHTML='<div class="empty-state"><i class="ti ti-scale"></i>Add at least 2 quotes in the same category to compare.</div>';return;}let html='';grouped.forEach(g=>{const minP=Math.min(...g.items.map(q=>q.price));const cols=Math.min(g.items.length,3);html+=`<div class="compare-group"><div class="compare-title">${qCatLabels[g.cat]} — ${g.items.length} quotes</div><div class="compare-grid" style="grid-template-columns:repeat(${cols},1fr);">`;g.items.forEach(q=>{const win=q.price===minP;html+=`<div class="compare-cell${win?' winner':''}">${win?'<div style="font-size:11px;color:var(--teal);font-weight:500;margin-bottom:4px;"><i class="ti ti-trophy"></i> Lowest price</div>':''}<div class="compare-vendor">${q.vendor}</div><div class="compare-price">${fmtQ(q.price)}</div><div class="compare-note">${q.type}</div>${q.scope?`<div class="compare-note" style="margin-top:4px;">${q.scope.substring(0,80)}${q.scope.length>80?'...':''}</div>`:''}${q.status==='chosen'?'<div style="margin-top:6px;font-size:11px;color:var(--teal);font-weight:500;"><i class="ti ti-check"></i> Chosen</div>':''}</div>`;});html+=`</div></div>`;});el.innerHTML=html;}
 function renderVSummary(){const el=document.getElementById('summary-content');if(!quotes.length){el.innerHTML='<div class="empty-state"><i class="ti ti-chart-bar"></i>Add quotes to see summary.</div>';return;}const chosen=quotes.filter(q=>q.status==='chosen');const total=chosen.reduce((s,q)=>s+q.price,0);const pending=quotes.filter(q=>q.status==='pending').length;let html=`<div class="metric-grid"><div class="metric"><div class="metric-label">Total quotes</div><div class="metric-value">${quotes.length}</div></div><div class="metric"><div class="metric-label">Categories</div><div class="metric-value">${new Set(quotes.map(q=>q.cat)).size}</div></div><div class="metric"><div class="metric-label">Chosen vendors</div><div class="metric-value">${chosen.length}</div></div><div class="metric"><div class="metric-label">Committed spend</div><div class="metric-value" style="font-size:16px;">${fmtQ(total)}</div></div></div>`;if(chosen.length){html+='<div class="slabel">Chosen vendors</div>';chosen.forEach(q=>{html+=`<div class="card-sm" style="border-color:var(--teal-mid);"><div class="quote-header"><span class="quote-cat ${qCatClass[q.cat]}">${qCatLabels[q.cat]}</span><span class="quote-vendor">${q.vendor}</span><span class="badge-chosen"><i class="ti ti-check"></i> Chosen</span><span class="quote-price">${fmtQ(q.price)}</span></div><div class="quote-meta">${q.type}${q.contact?' · '+q.contact:''}</div></div>`;});}if(pending>0)html+=`<div class="gtip"><i class="ti ti-alert-triangle"></i> ${pending} quote${pending>1?'s':''} still pending. Head to "All quotes" to decide.</div>`;el.innerHTML=html;}
-function loadSample(){quotes=[{id:1,cat:'pest',vendor:'Rentokil',contact:'James Tan',price:280,type:'one-time',valid:'2026-06-15',scope:'Termites, cockroaches, ants. Full terrace incl. garden perimeter. 3-month warranty.',notes:'NEA licensed.',status:'pending'},{id:2,cat:'pest',vendor:'Killem Pest',contact:'',price:195,type:'one-time',valid:'2026-06-10',scope:'Cockroaches and ants only. Indoor treatment.',notes:'Does not cover termites or garden.',status:'pending'},{id:3,cat:'pest',vendor:'Anticimex',contact:'Sarah',price:320,type:'one-time',valid:'2026-06-20',scope:'Full treatment incl. termites, mosquitoes. Digital monitoring device included.',notes:'Premium option.',status:'pending'},{id:4,cat:'garden',vendor:'Ah Kow Landscaping',contact:'Mr Kow',price:90,type:'per-visit',valid:'',scope:'Mowing, trimming, leaf clearing.',notes:'Neighbour recommendation.',status:'pending'},{id:5,cat:'garden',vendor:'GreenThumb SG',contact:'',price:150,type:'per-visit',valid:'2026-06-30',scope:'Full garden maintenance + fertilising.',notes:'Includes fertilising.',status:'pending'},{id:6,cat:'electrician',vendor:'PowerBright Elec',contact:'Andy',price:850,type:'one-time',valid:'',scope:'Install 8 light points, 2 dimmers, check wiring.',notes:'EMA licensed.',status:'pending'},{id:7,cat:'electrician',vendor:'JL Electrical',contact:'',price:1100,type:'one-time',valid:'',scope:'8 light points, dimmers, full rewiring check + safety cert.',notes:'Includes safety certificate.',status:'pending'}];saveQ();renderAll();alert('Sample data loaded!');}
+function loadSample(){
+  // Pre-load Aardwolf quote
+  if(!quotes.find(q=>q.vendor==='Aardwolf Pestkare')){
+    quotes.push({id:Date.now()+1,cat:'pest',vendor:'Aardwolf Pestkare',contact:'Wiliawaty · 9828 6524',price:2354.40,type:'annual',valid:'2026-06-01',scope:'12 monthly visits · Ant, Cockroach, Rodent, Mosquito, House Lizard · Visual termite inspection · In2Care mosquito trap (FOC) · Mosquito misting (Sumipro EW) · ARMS rodent stations · 24hr emergency hotline 6268-1771 · Paperless billing',notes:'S$2,160 + 9% GST = S$2,354.40 · Active termite treatment quoted separately if infestation found · Keep bait stations away from dog',status:'chosen'});
+    saveQ();
+  }quotes=[{id:1,cat:'pest',vendor:'Rentokil',contact:'James Tan',price:280,type:'one-time',valid:'2026-06-15',scope:'Termites, cockroaches, ants. Full terrace incl. garden perimeter. 3-month warranty.',notes:'NEA licensed.',status:'pending'},{id:2,cat:'pest',vendor:'Killem Pest',contact:'',price:195,type:'one-time',valid:'2026-06-10',scope:'Cockroaches and ants only. Indoor treatment.',notes:'Does not cover termites or garden.',status:'pending'},{id:3,cat:'pest',vendor:'Anticimex',contact:'Sarah',price:320,type:'one-time',valid:'2026-06-20',scope:'Full treatment incl. termites, mosquitoes. Digital monitoring device included.',notes:'Premium option.',status:'pending'},{id:4,cat:'garden',vendor:'Ah Kow Landscaping',contact:'Mr Kow',price:90,type:'per-visit',valid:'',scope:'Mowing, trimming, leaf clearing.',notes:'Neighbour recommendation.',status:'pending'},{id:5,cat:'garden',vendor:'GreenThumb SG',contact:'',price:150,type:'per-visit',valid:'2026-06-30',scope:'Full garden maintenance + fertilising.',notes:'Includes fertilising.',status:'pending'},{id:6,cat:'electrician',vendor:'PowerBright Elec',contact:'Andy',price:850,type:'one-time',valid:'',scope:'Install 8 light points, 2 dimmers, check wiring.',notes:'EMA licensed.',status:'pending'},{id:7,cat:'electrician',vendor:'JL Electrical',contact:'',price:1100,type:'one-time',valid:'',scope:'8 light points, dimmers, full rewiring check + safety cert.',notes:'Includes safety certificate.',status:'pending'}];saveQ();renderAll();alert('Sample data loaded!');}
 </script>
 </body>
 </html>
